@@ -1,0 +1,124 @@
+* {
+  transition: all 2s;
+}
+
+// ======== login ========== //
+
+.expend_login {
+  color: $white;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 16rem;
+    height: 16rem;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    border-radius: 100%;
+    transition: all .3s;
+    z-index: -1;
+    cursor: pointer;
+  }
+
+  .login-circle {
+    width: 7rem;
+    height: 7rem;
+    font-size: 16px;
+    font-weight: 500;
+    color: $white;
+  }
+
+  &.expend_login_open {
+    &::before {
+      transform: translate(0%, 0%);
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0%;
+      border-top-right-radius: 100px;
+      background-color: rgba(0,0,0,.85);
+    }
+  }
+
+  @media #{$md-layout} {
+    &::before {
+      width: 0;
+      height: 0;
+      border-top-right-radius: 80px;
+    }
+    .wallet {
+      display: none;
+    }
+
+    &.onTop {
+      .login-circle {
+        width: 5.5rem;
+        height: 7rem;
+      }      
+    }
+    .login-circle {
+      width: 5.5rem;
+      height: 5rem;
+    }
+  }
+}
+
+.login_contain {
+  width: 100vw;
+  height: 100vh !important;
+  position: fixed;
+  top: 0;
+  height: 0;
+  z-index: 100;
+  pointer-events: none;
+  .login_connect {
+    max-width: 300px;
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    min-width: 10rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    &.ant-btn-round.ant-btn-lg {
+      padding: 10px 20px !important;
+      height: auto;
+    }
+  }
+    
+}
+
+.header-area {
+  &.header--fixed {
+  }
+  &.sticky {
+    background: rgba(0,0,0, .4) !important;
+    backdrop-filter: blur(7px);  
+  }
+  .header-right {
+    margin-right: 10rem !important;
+  }
+
+  @media #{$lg-layout} {
+    .header-right {
+      margin-right: 6rem !important;
+    }
+  }
+
+  @media #{$md-layout} {
+    .header-right {
+      margin-right: 0rem !important;
+    }
+    .social-share-inner {
+      display: none;
+    }
+  }
+}

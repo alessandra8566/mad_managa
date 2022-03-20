@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url('/fonts/Roboto-Regular.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: "Anton-Regular";
+  src: url('/fonts/Anton-Regular.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: "LondrinaOutline-Regular";
+  src: url('/fonts/LondrinaOutline-Regular.ttf') format("truetype")
+}

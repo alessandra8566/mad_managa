@@ -1,0 +1,148 @@
+// ==== default Setting ==== //
+
+* {
+  font-family: 'Roboto-Regular' !important;
+}
+@for $i from 0 through 10 {
+  // ==== z-index ==== //
+  .zid_#{$i} {
+    z-index: $i !important;
+  } 
+
+  .animate__delay-#{$i} {
+    --animate-delay: '#{0.5*$i}s' !important;
+  }
+}
+
+// ==== font ===== //
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto-Regular"),
+  url('/fonts/Roboto-Regular.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: "Anton-Regular";
+  src: local("Anton-Regular"),
+  url('/fonts/Anton-Regular.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: "LondrinaOutline-Regular";
+  src: local("LondrinaOutline-Regular"),
+  url('/fonts/LondrinaOutline-Regular.ttf') format("truetype")
+}
+.font-regular {
+  font-family: 'Anton-Regular' !important;
+  src: local("Anton-Regular"),
+  url('/fonts/Anton-Regular.ttf') format("truetype")
+}
+
+.font-outline {
+  font-family: 'LondrinaOutline-Regular' !important;
+  src: local("LondrinaOutline-Regular"),
+  url('/fonts/LondrinaOutline-Regular.ttf') format("truetype")
+}
+
+
+// ==== neon ==== //
+.neon-red {
+  animation: neon-red 1.5s ease-in-out infinite alternate;
+}
+
+.neon-yellow {
+  animation: neon-yellow 1.5s ease-in-out infinite alternate;
+}
+
+.neon-blue {
+  animation: neon-blue 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-red {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #ff1177,
+      0 0 4px #ff1177, 0 0 5px #ff1177, 0 0 7px #ff1177, 0 0 9px #ff1177;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #ff1177,
+      0 0 4px #ff1177, 0 0 5px #ff1177, 0 0 7px #ff1177, 0 0 9px #ff1177;
+  }
+}
+
+@keyframes neon-blue {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #228dff,
+      0 0 4px #228dff, 0 0 5px #228dff, 0 0 7px #228dff, 0 0 9px #228dff;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #228dff,
+      0 0 4px #228dff, 0 0 5px #228dff, 0 0 7px #228dff, 0 0 9px #228dff;
+  }
+}
+
+@keyframes neon-yellow {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 8px #fff, 0 0 10px #ffdd1b,
+      0 0 17px #ffdd1b, 0 0 20px #ffdd1b, 0 0 25px #ffdd1b, 0 0 37px #ffdd1b;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #ffdd1b,
+      0 0 8px #ffdd1b, 0 0 10px #ffdd1b, 0 0 13px #ffdd1b, 0 0 18px #ffdd1b;
+
+  }
+}
+
+.my_sticky {
+  position: sticky !important;
+  top: 0%;
+  left: 0%;
+
+}
+
+.white {
+  color: $white;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: normal;
+}
+
+@media #{$md-layout} {
+  h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+
+  }
+  h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+@media #{$sm-layout} {
+  h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    line-height: 1.25rem;
+  }
+
+  p {
+    font-size: .8rem;
+  }
+}
