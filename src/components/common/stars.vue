@@ -1,9 +1,9 @@
 <template>
   <div class="sky_container" :class="{'blue': starsbackgroundcolor == 'blue', 'red': starsbackgroundcolor == 'red'}">
     <div class="sky">
-      <div class="stars"></div>
-      <div class="stars1"></div>
-      <div class="stars2"></div>
+      <div class="stars" v-if="stars"></div>
+      <div class="stars1" v-if="stars"></div>
+      <div class="stars2" v-if="stars"></div>
       <div class="shooting-stars" v-if="shootingStars"></div>
       <canvas class="meteor" width="100%" height="100%" v-if="meteor" ref="meteor" />
     </div>
@@ -19,6 +19,10 @@
     name: "stars",
     props: {
       shootingStars: {
+        type: Boolean,
+        default: true
+      },
+      stars: {
         type: Boolean,
         default: true
       },
@@ -44,9 +48,9 @@
   $starOneScrollDuration: 100s;
   $starTwoScrollDuration: 125s;
   $starThreeScrollDuration: 175s;
-  $numStarOneStars: 1700;
-  $numStarTwoStars: 700;
-  $numStarThreeStars: 200;
+  $numStarOneStars: 600;
+  $numStarTwoStars: 300;
+  $numStarThreeStars: 100;
   $numShootingStars: 10;
   $width: 100%;
 

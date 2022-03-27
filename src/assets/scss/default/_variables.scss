@@ -5,6 +5,7 @@ $body-color: #1d1d24;
 $heading-color: #1f1f25;
 $border-color: #d4d4d4;
 $white:#fff;
+$lightblue: #00F0FF;
 
 
 /*===============================
@@ -59,10 +60,6 @@ $youtube : #cd201f;
 
 
 // Layouts
-$smlg-device: 'only screen and (max-width: 1199px)';
-
-$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
-
 $laptop-device: 'only screen and (max-width: 1599px)';
 $lg-layout: 'only screen and(max-width: 1199px)';
 $md-layout:'only screen and (max-width: 991px)';

@@ -4,16 +4,20 @@
       <div class="ptb--120">
         <div class="container por pad_0" ref="qa_container" id="qa_container" data-stellar-ratio="2">
           <sub-title title="Q&A" class="pb--60" />
-          <a-collapse class="" accordion expand-icon-position="right">
-            <template #expandIcon="props">
-              <a-icon type="minus" v-if="props.isActive" />
-              <a-icon type="plus" v-else />
-            </template>
-            <a-collapse-panel v-for="(item, ind) in collapesData" :key="ind" :header="`${item.title.toUpperCase()}`">
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque commodi cupiditate delectus
-                doloremque eos magni veritatis recusandae ipsum tempora. </p>
-            </a-collapse-panel>
-          </a-collapse>
+          <a-row type="flex" class="jcc">
+            <a-col :sm="24" :lg="17">
+              <a-collapse class="" expand-icon-position="right">
+                <template #expandIcon="props">
+                  <a-icon type="minus" v-if="props.isActive" />
+                  <a-icon type="plus" v-else />
+                </template>
+                <a-collapse-panel v-for="(item, ind) in collapesData" :key="ind"
+                  :header="`${item.title.toUpperCase()}`">
+                  <p>{{ item.content }}</p>
+                </a-collapse-panel>
+              </a-collapse>
+            </a-col>
+          </a-row>
         </div>
       </div>
     </Stars>
@@ -43,33 +47,34 @@
     },
     data() {
       return {
+        ismobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
         collapesData: [{
           title: "General information?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS"
         }, {
           title: "When is the launch and reveal?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "2022 Spring - Please follow our discord channel for more details"
         }, {
           title: "Road Map?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "Our mission is to build the largest manga community as well as the best manga story on the blockchain while providing the most comprehensive curation platform for creators, manga artists, storytellers, and fans alike that can rival many big-name manga series in existence with multitude of unique features"
         }, {
           title: "FOMO Stone?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "FOMO Stones will continue to evolve through variety of catalysts, each with their own unique utilities and features at different stages of the series for users to decide and experience. All decisions matter to the future chapters of the MadManga universe and holder’s NFTs. Therefore, it is crucial for you to own FOMO Stone(s) to be able to continue the journey in MadManga metaverse and its related projects."
         }, {
           title: "How to get on whitelist?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "You are still early in this project! Please follow our discord channel for detailed information as these spots are extremely limited!"
         }, {
           title: "How much and how many to mint?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "Please follow our discord channel for more details in the near future"
         }, {
           title: "What do I own after minting MadManga NFTs?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "You, the NFT owner owns the commercial rights of the NFT within reasonable and ethical conditions. Make it fun, make it big and MAKE IT MAD!"
         }, {
           title: "Royalties? ",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "7.5% royalties will be collected in the secondary market to keep MadManga team employed, project’s longevity healthy. We will be re-investing big portions for utilities, pools, sweeps, incentives, marketing and future chapters"
         }, {
           title: "What does the future look like for MadManga?",
-          content: "MadManga Chapter FOMO Stone will have unique, randomly generated PFP on the etherum blockchain as ERC-721 NFTs and hosted on IPFS."
+          content: "We hope that this community will be the biggest in the blockchain filled with passion, just like the existing Marvel and manga community - attracting all fans and creators who share a love for manga. We would not miss out on an opportunity to create amazing works. The future of MadManga is dependent on MadManga DAO and all of you will be a participant of all future releases."
         }, ],
         scrollPositionY: 0
       };
@@ -93,6 +98,7 @@
     },
     watch: {
       currentScrollTop(newVal) {
+        if (this.ismobile) return
         const elementOffset = $('#qa_container').offset();
         this.$refs.qa_container.style.transform = `translateY(${(elementOffset.top - newVal) / 20}px)`
       }
@@ -107,13 +113,17 @@
 
     .ant-collapse-header {
       color: $white !important;
-      font-size: 1rem;
+      font-size: 20px;
 
       .ant-collapse-arrow {
         transform: translate(45px, -50%) !important;
+
+        svg path {
+          stroke: white;
+          stroke-width: 100px;
+        }
+
       }
-
-
     }
 
     .ant-collapse-content {
@@ -124,6 +134,28 @@
       p {
         font-size: 1rem;
       }
+    }
+  }
+
+  @media #{$large-mobile} {
+    .ant-collapse {
+      margin-right: initial;
+
+      .ant-collapse-header {
+        color: $white !important;
+        font-size: 20px;
+
+        .ant-collapse-arrow {
+          transform: translate(0px, -50%) !important;
+
+          svg path {
+            stroke: white;
+            stroke-width: 100px;
+          }
+
+        }
+      }
+
     }
   }
 </style>

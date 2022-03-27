@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="login_contain flex jcc aic" v-if="isLoginOpen">
-      <div class="login_connect animate__animated animate__fadeIn animate__delay-1s flex jcc aic fdc">
+      <div class="login_connect flex jcc aic fdc">
         <h1 class=" text-center white font-regular mar_0">CONNECT</h1>
         <img src="/images/mad_mange/metamask.png" class="width100 login_dog" alt="">
         <div class="wid100 flex jcc aic mart_2">
@@ -35,7 +35,6 @@
       TriggerLoginWrapper(status) {
         this.$store.dispatch('home/updateIsLoginOpen', status)
       },
-
     }
   }
 </script>
@@ -44,8 +43,8 @@
   .login-page {
     top: 0;
     right: 0;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     position: fixed;
     z-index: 10000;
     overflow: hidden;
@@ -55,6 +54,24 @@
     &.open {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  .wallet {
+    font-size: 14px !important;
+
+    &:hover {
+      color: $lightblue;
+    }
+  }
+
+  @keyframes login-fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
     }
   }
 

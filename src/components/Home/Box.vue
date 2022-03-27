@@ -16,30 +16,18 @@
                   <div class="box-wrapper">
                     <div class="box-faces">
                       <div class="box-face box-face--is-front">
-                        <p>
-                          <!-- <i class="icon-rocket icon-4x"></i> -->
-                          <a-icon type="question" class="box_icon"></a-icon>
-                        </p>
+                        <p v-html="myicon"></p>
                       </div>
                       <div class="box-face box-face--is-back">
-                        <p>
-                          <!-- <i class="icon-rocket icon-4x"></i> -->
-                          <a-icon type="question" class="box_icon"></a-icon>
-                        </p>
+                        <p v-html="myicon"></p>
                       </div>
                       <div class="box-face box-face--is-top">&nbsp;</div>
                       <div class="box-face box-face--is-bottom">&nbsp;</div>
                       <div class="box-face box-face--is-left">
-                        <p>
-                          <!-- <i class="icon-rocket icon-4x"></i> -->
-                          <a-icon type="question" class="box_icon"></a-icon>
-                        </p>
+                        <p v-html="myicon"></p>
                       </div>
                       <div class="box-face box-face--is-right">
-                        <p>
-                          <!-- <i class="icon-rocket icon-4x"></i> -->
-                          <a-icon type="question" class="box_icon"></a-icon>
-                        </p>
+                        <p v-html="myicon"></p>
                       </div>
                     </div><!-- end of .box -->
                   </div><!-- end of .box-wrapper -->
@@ -73,6 +61,23 @@
       return {
         title: "About Me",
         description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered <a href="#">alteration</a> in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,',
+        myicon: `
+          <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:#FFFFFF;}
+          </style>
+          <g>
+            <path class="st0" d="M203.58,310.63v-71.34c14.29,0,26.55-0.74,36.79-2.23c10.23-1.48,18.63-4.63,25.21-9.43
+              c6.57-4.8,11.43-12.06,14.58-21.78c3.14-9.72,4.72-22.75,4.72-39.1c0-7.43-0.94-13.95-2.83-19.55c-1.89-5.6-6.26-8.4-13.12-8.4
+              c-4.92,0-8.52,1.57-10.8,4.72c-2.29,3.15-3.75,7.15-4.37,12c-0.63,4.86-0.94,9.92-0.94,15.18v25.04h-62.77v-43.56
+              c0-23.09,7.34-40.21,22.04-51.36c14.69-11.15,33.64-16.72,56.85-16.72c20.35,0,36.38,3.66,48.1,10.98
+              c11.72,7.32,20.07,17.98,25.04,31.98c4.97,14.01,7.46,31.13,7.46,51.36c0,19.78-3.23,37.44-9.69,52.99
+              c-6.46,15.55-16.26,27.78-29.41,36.7c-13.15,8.92-29.73,13.38-49.73,13.38v29.15H203.58z M201.69,388.49v-51.1h61.39v51.1H201.69z"
+              />
+          </g>
+          </svg>
+        `
       };
     },
   };
@@ -116,7 +121,7 @@
   }
 
   .box-faces p {
-    padding: 40px 0;
+    // padding: 40px 0;
   }
 
   .box-face {
@@ -232,7 +237,7 @@
     }
 
     .box-faces p {
-      padding: 20px 0;
+      // padding: 20px 0;
     }
 
     .box-faces {

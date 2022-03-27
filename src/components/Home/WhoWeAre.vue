@@ -1,16 +1,16 @@
 <template>
   <grid3d :options="gridOption" class="por">
     <div class="container pt--120 zid_6">
-      <sub-title title="WHO WE ARE" class="pb--40" />>
-      <a-row type="flex" class="ais">
-        <a-col :md="12" class="pad_6 who_we_are_content">
+      <sub-title title="WHO WE ARE" class="" />
+      <a-row type="flex" class="who_we_are_text_container ais pt--40 pb--60">
+        <a-col :md="24" :lg="16" class="pad_6 who_we_are_content">
           <p class="white">MadManga is an international team, with Silicon Valley venture capitalists as consultants and
             team members
             from copyrights, exhibition curation, e-sports, and tech backgrounds. The members have respectively worked
             closely with Disney, Warner Bros. Studio, Barbie, ONE PIECE, and NARUTO. In addition, tens of contemporary
             artists will join hands to work on this project.</p>
         </a-col>
-        <a-col :md="12" class="pad_6 flex jcsa fdc who_we_are_logo">
+        <a-col :md="24" :lg="8" class="pad_6 flex jcsa fdc who_we_are_logo">
           <h3 class="white marb_4">PARTNER</h3>
           <img src="/images/mad_mange/caller.png" style="max-width: 280px" class="" alt="">
         </a-col>
@@ -48,7 +48,8 @@
           fill: false,
           shootingStars: false,
           starsbackgroundcolor: 'red',
-          meteor: true
+          meteor: true,
+          stars: false
         },
         eggList: [{
           title: "DAVID",
@@ -195,6 +196,16 @@
     }
   }
 
+  @media #{$md-layout} {
+    .who_we_are_logo {
+      flex-direction: initial;
+      align-items: center;
+
+      h3 {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
 
   @media #{$sm-layout} {
     .container {
@@ -204,11 +215,14 @@
     .who_we_are_content,
     .who_we_are_logo {
       padding: 0 !important;
+
+      p {
+        text-align: center;
+      }
     }
 
     .who_we_are_logo {
       width: 100%;
-      justify-content: center !important;
       align-items: center !important;
       margin: 3rem 0;
 
@@ -220,5 +234,21 @@
         transform: scale(1.2);
       }
     }
+  }
+
+  @media #{$large-mobile} {
+    .who_we_are_logo {
+      flex-direction: column;
+      justify-content: center !important;
+
+      h3 {
+        margin-bottom: 2rem !important;
+      }
+    }
+
+    .who_we_are_text_container {
+      padding-bottom: 0 !important;
+    }
+
   }
 </style>

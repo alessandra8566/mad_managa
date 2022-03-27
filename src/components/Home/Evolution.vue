@@ -1,6 +1,6 @@
 <template>
   <grid3d :options="gridOption">
-    <div class="container ptb--120 zid_4 por">
+    <div class="container evolation_container ptb--120 zid_4 por">
       <sub-title title="EVOLUTION" />
       <a-row class="flex jcc aic pt--40">
         <a-col :sm="24" :lg="16">
@@ -20,7 +20,7 @@
           FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE
         </h1>
       </Marquee>
-      <Marquee move-to="right" class="" style="opacity: .8;">
+      <Marquee move-to="right" class="" style="opacity: .5;">
         <h1 class="font-regular marquee_font marb_1" style="color: #DAAAF9;">FOMO STONE FOMO STONE FOMO STONE FOMO STONE
           FOMO
           STONE FOMO STONE FOMO
@@ -28,7 +28,7 @@
           FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE
         </h1>
       </Marquee>
-      <Marquee move-to="left" class="" style="opacity: .8;">
+      <Marquee move-to="left" class="" style="opacity: .3;">
         <h1 class="font-regular marquee_font white marb_1" style="color: #2EA6DF">FOMO STONE FOMO STONE FOMO STONE FOMO
           STONE
           FOMO STONE FOMO STONE
@@ -37,7 +37,7 @@
           FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE FOMO STONE
         </h1>
       </Marquee>
-      <div class="flex jcc pt--120" id="evolation">
+      <div class="flex jcc" id="evolation">
         <div class="animation_1 zid_1 animate__animated">
           <img src="/images/mad_mange/eggs/Zoro.png" class="width100 evolation_scale third left" alt="">
         </div>
@@ -76,7 +76,7 @@
           top: false,
           bottom: true,
           color: 'blue', // purple | blue | white
-          fill: false
+          fill: true
         },
         random: 0
       }
@@ -99,6 +99,35 @@
 <style lang="scss">
   .marquee_font {
     white-space: nowrap;
+  }
+
+  .evolation_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #evolation {
+    transform: translateY(-40%)
+  }
+
+  @media #{$sm-layout} {
+    #evolation {
+      transform: translateY(0%)
+    }
+  }
+
+  @media #{$lg-layout} {
+    #evolation {
+      width: 120%;
+    }
+  }
+
+  @media #{$sm-layout} {
+    #evolation {
+      width: 100%;
+    }
   }
 
   .evolation_scale {
@@ -245,8 +274,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80vw;
-    height: 80vw;
+    width: 50vw;
+    height: 50vw;
     transform: translate(-50%, -50%);
     border-radius: 100%;
     background: rgb(255, 14, 239);

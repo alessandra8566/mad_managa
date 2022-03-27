@@ -25,7 +25,7 @@
       Header,
       Footer,
       Loading
-    }
+    },
   }
 </script>
 

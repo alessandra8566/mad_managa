@@ -1,94 +1,148 @@
 <template>
-  <thunder-bg>
-    <div class="thunder_container zid_5">
-      <div class="container pt--120">
-        <div class="barrage_container flex jcc aic fdc">
-          <div class="p_img_container white por">
-            <div class="white_circle zid_5"></div>
-            <img src="/images/mad_mange/p.png" class="p_img por zid_6" alt="">
-            <div class="p_container zid_5">
-              <div class="p_container_left flex jcc aic fdc">
-                <p class="font-regular p_1">ITEM-NAME</p>
-                <p class="font-regular p_2">CONTENT</p>
-                <p class="font-regular p_3">ITEM-NAME</p>
-                <p class="font-regular p_4">CONTENT</p>
-                <p class="font-regular p_5">FAKE-TEXT</p>
+  <div>
+    <thunder-bg style="overflow-x: hidden">
+      <div class="thunder_container zid_5">
+        <div class="container pt--120">
+          <div class="barrage_container flex jcc aic fdc">
+            <div class="p_img_container white por">
+              <div class="white_circle zid_5"></div>
+              <img src="/images/mad_mange/p.png" class="p_img por zid_6" alt="">
+              <div class="p_container zid_5">
+                <div class="p_container_left flex jcc aic fdc">
+                  <p class="font-regular p_1">ITEM-NAME</p>
+                  <p class="font-regular p_2">CONTENT</p>
+                  <p class="font-regular p_3">ITEM-NAME</p>
+                  <p class="font-regular p_4">CONTENT</p>
+                  <p class="font-regular p_5">FAKE-TEXT</p>
+                </div>
+                <div class="p_container_right flex jcc aic fdc">
+                  <p class="font-regular p_6">ITEM-NAME</p>
+                  <p class="font-regular p_7">CONTENT</p>
+                  <p class="font-regular p_8">FAKE-TEXT</p>
+                  <p class="font-regular p_9">ITEM-NAME</p>
+                  <p class="font-regular p_10">FAKE-TEXT</p>
+                </div>
               </div>
-              <div class="p_container_right flex jcc aic fdc">
-                <p class="font-regular p_6">ITEM-NAME</p>
-                <p class="font-regular p_7">CONTENT</p>
-                <p class="font-regular p_8">FAKE-TEXT</p>
-                <p class="font-regular p_9">ITEM-NAME</p>
-                <p class="font-regular p_10">FAKE-TEXT</p>
+            </div>
+            <div class="flex jcc aic por width100 ptb--40 zid_5 think_container">
+              <div class="think flex jcc aic fdc">
+                <span class="block"></span>
+                <span class="block"></span>
+                <span class="block"></span>
+                <span class="block"></span>
+                <span class="block"></span>
               </div>
+              <p class="white text-center po_center width100" style="write-space: nowrap;">
+                Which FOMO Stone
+                combinations will
+                you get
+              </p>
             </div>
-          </div>
-          <div class="flex jcc aic por width100 ptb--40 zid_5 think_container">
-            <div class="think flex jcc aic fdc">
-              <span class="block"></span>
-              <span class="block"></span>
-              <span class="block"></span>
-              <span class="block"></span>
-              <span class="block"></span>
-            </div>
-            <p class="white text-center po_center width100" style="write-space: nowrap;">
-              Which FOMO Stone
-              combinations will
-              you get
-            </p>
-          </div>
-          <div class="fomo_hiro_img_container por">
-            <img src="/images/mad_mange/fomo-hiro-cut.png" class="zid_2 por" alt="">
-            <div class="fomo_hiro_marquee" style="width: 200%">
-              <Marquee move-to="left" style="opacity: .8;" class="zid_1">
-                <h1 class="white font-regular marquee_font">
-                  what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
-                  Be?!
-                  what’s It Gonna Be?!
-                  what’s It Gonna Be?!what’s It Gonna Be?!</h1>
-              </Marquee>
-            </div>
-            <div class="circle"></div>
+
           </div>
         </div>
       </div>
+    </thunder-bg>
+    <div class="my_parallax" id="Parallax">
+      <thunder-bg :style="`overflow-x: hidden; --sticky-height: ${950}px`" class="parallax-sticky-start">
+        <div class="thunder_container zid_5 pt--40" style="">
+          <div class="container">
+            <div class="fomo_hiro_img_container por  width100 flex jcc aic">
+              <img src="/images/mad_mange/fomo-hiro-cut.png" class="zid_2 por fomo_hiro_img" alt="">
+              <div class="fomo_hiro_marquee" style="width: 200%;">
+                <Marquee move-to="left" class="zid_1">
+                  <h1 class="white font-regular marquee_font">
+                    what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
+                    Be?!
+                    what’s It Gonna Be?!
+                    what’s It Gonna Be?!what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
+                    Be?!
+                    what’s It Gonna Be?!
+                    what’s It Gonna Be?!what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
+                    Be?!
+                    what’s It Gonna Be?!
+                    what’s It Gonna Be?!what’s It Gonna Be?!</h1>
+                </Marquee>
+              </div>
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </thunder-bg>
+      <Box class="parallax-sticky" />
     </div>
-  </thunder-bg>
+  </div>
 </template>
 
 <script>
   import Marquee from '../common/marquee.vue'
   import ThunderBg from '../common/thunderBg.vue'
+  import Box from "../Home/Box.vue"
   import {
     mapState
   } from 'vuex'
   export default {
     components: {
       Marquee,
-      ThunderBg
+      ThunderBg,
+      Box
     },
     data() {
-      return {}
-    },
-    computed: {
-      ...mapState('home', ['currentScrollTop'])
-    },
-    methods: {
-      keyframe_setup() {
-
+      return {
+        fomo_img_height: 0
       }
     },
+    computed: {
+      ...mapState('home', ['currentScrollTop', 'offsetTops'])
+    },
+    methods: {},
+    mounted() {
+      console.log(document.getElementsByClassName("fomo_hiro_img")[0].height)
+      this.fomo_img_height = document.getElementsByClassName("fomo_hiro_img")[0].offsetHeight
+    },
     watch: {
-      // currentScrollTop(newVal) {
-      //   const elementOffset = $('#Thunder').offset();
-      //   if (newVal > elementOffset.top) $('#Thunder').addClass('my_sticky')
-      //   else $('#Thunder').removeClass('my_sticky')
-      // }
+      currentScrollTop(newVal) {
+        // if (newVal >= this.offsetTops.Parallax) {
+        //   $(".my_parallax").addClass("start_parallax")
+        // } else {
+        //   $(".my_parallax").removeClass("start_parallax")
+
+        // }
+      }
     }
   }
 </script>
 
 <style lang="scss">
+  .start_parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .parallax-sticky-start {
+    position: sticky !important;
+    top: calc(var(--sticky-height) * -1 + 100vh)
+  }
+
+  .parallax-sticky-end {
+    position: relative !important;
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
   $OpacityStart: 80;
   $animate: move-right,
   move-left;
@@ -129,9 +183,6 @@
     animation: $myAnimate $animateDuration linear #{(random($animateDelay) / 100) + s} infinite;
   }
 
-  .thunder_container {
-    // background-color: rgba(#000, .8);
-  }
 
   .fomo_hiro_img_container {
 
@@ -143,8 +194,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 50vw;
-      height: 50vw;
+      width: 40vw;
+      height: 40vw;
+      max-width: 750px;
+      max-height: 750px;
       transform: translate(-50%, -50%);
       border-radius: 100%;
       background: rgb(113, 199, 213);
@@ -266,7 +319,7 @@
 
   }
 
-  @media #{$sm-layout} {
+  @media #{$large-mobile} {
     .p_img_container {
       .p_img {
         max-width: 200px;
@@ -279,13 +332,22 @@
       }
 
       .circle {
-        width: 100vw;
-        height: 100vw;
+        width: 80vw;
+        height: 80vw;
       }
     }
 
     .think_container {
       padding: 0;
+    }
+  }
+
+  @media #{$md-layout} {
+    .fomo_hiro_img_container {
+      .circle {
+        width: 60vw;
+        height: 60vw;
+      }
     }
   }
 </style>

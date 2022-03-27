@@ -1,19 +1,19 @@
 <template>
   <grid3d :options="gridOption">
-    <div class="container">
-      <a-row style="z-index: 10;" class="">
+    <div class="container" style="overflow: initial">
+      <a-row style="z-index: 10;" type="flex" class="ais jcc">
         <a-col :lg="12" :md="24" class="">
           <div class="width100 flex jcc aic">
-            <img src="/images/logo/LOGO.svg" class="width100 logo_img">
+            <img src="/images/logo/LOGO.svg" class="width100 logo_img neon-svg">
           </div>
           <div class="text-center">
             <h3 class="white mar_0">THE LARGEST</h3>
-            <h2 class="white mar_0 font-regular neon-blue zid_1">MANAGA-CREATIONS</h2>
+            <h2 class="white mar_0 font-regular neon-blue zid_1">MANGA-CREATIONS</h2>
             <h1 class="white mar_0 font-regular neon-red zid_0">METAVERSE</h1>
             <h4 class="white mar_0">Let your imageination roam free.</h4>
           </div>
         </a-col>
-        <a-col :lg="12" :md="24" class="height100 flex jcfs eggs_container_pd">
+        <a-col :lg="12" :md="24" class="flex jcfs aic eggs_container_pd">
           <div class="eggs_container flex jcfs">
             <div class="eggs egg_zoro">
               <img src="/images/mad_mange/eggs/Zoro.png" class="eggs" alt="">
@@ -32,34 +32,72 @@
 </template>
 
 <script>
+  import {
+    mapState
+  } from 'vuex';
   import grid3d from '../../components/common/grid3d.vue'
+  import mixins from '../../mixin'
   export default {
     name: "Home",
+    mixins: [mixins.global],
     components: {
       grid3d
     },
     data() {
       return {
         gridOption: {
-          top: true,
-          bottom: true,
-          color: 'purple', // purple | blue | white
-          fill: true
-        }
+          top: false,
+          bottom: false,
+          bgImg: true,
+          bottomAnimation: false,
+          color: 'deepblue', // purple | blue | deepblue | white
+          fill: true,
+          stars: false,
+          shootingStars: false
+        },
+        isScrolling: false
       };
     },
-    methods: {}
+    methods: {
+
+    },
+    computed: {
+      ...mapState('home', ['currentScrollTop', 'offsetTops'])
+    },
+    mounted() {},
+    watch: {
+      currentScrollTop(newVal, oldVal) {
+        // 判斷往上還是往下
+        // const direction = newVal > oldVal ? 'down' : 'up'
+        // if (!this.isScrolling) {
+        //   if (direction == "down") {
+        //     if (newVal < this.offsetTops.Madmanga && newVal > this.offsetTops.Home) {
+        //       this.isScrolling = true
+        //       window.scrollTo({
+        //         top: this.offsetTops.Madmanga,
+        //         behavior: 'smooth'
+        //       })
+        //     }
+        //   }
+        // }
+      }
+    }
   };
 </script>
 
 <style lang="scss" scoped>
+  // #Home {
+  //   min-height: 100vh;
+  // }
+
+
   .eggs_container_pd {
-    padding: 210px 0;
+    // padding: 210px 0;
     position: relative;
 
     .eggs_container {
-      position: absolute;
-      bottom: 10%;
+      // position: absolute;
+      // bottom: 10%;
     }
   }
 
@@ -70,7 +108,7 @@
 
 
   .eggs {
-    transform: scale(1.3);
+    transform: scale(1.6);
 
     &.egg_zoro {
       // transform: translateX(20px)
@@ -93,23 +131,23 @@
 
   @keyframes swing-up-down-zoro {
     0% {
-      transform: translate(20px, 0);
+      transform: translate(0px, 0);
     }
 
     25% {
-      transform: translate(20px, 10px);
+      transform: translate(0px, 10px);
     }
 
     50% {
-      transform: translate(20px, 0px);
+      transform: translate(0px, 0px);
     }
 
     75% {
-      transform: translate(20px, -10px);
+      transform: translate(0px, -10px);
     }
 
     100% {
-      transform: translate(20px, 0px);
+      transform: translate(0px, 0px);
     }
   }
 
@@ -137,23 +175,23 @@
 
   @keyframes swing-up-down-andrea {
     0% {
-      transform: translate(-60px, 0);
+      transform: translate(-40px, 0);
     }
 
     25% {
-      transform: translate(-60px, 10px);
+      transform: translate(-40px, 10px);
     }
 
     50% {
-      transform: translate(-60px, 0px);
+      transform: translate(-40px, 0px);
     }
 
     75% {
-      transform: translate(-60px, -10px);
+      transform: translate(-40px, -10px);
     }
 
     100% {
-      transform: translate(-60px, 0px);
+      transform: translate(-40px, 0px);
     }
   }
 
@@ -227,7 +265,7 @@
 
   @media #{$md-layout} {
     .eggs_container_pd {
-      padding: 140px 0;
+      padding: 60px 0 40px;
 
       .eggs_container {
         bottom: 0;
@@ -235,7 +273,7 @@
     }
 
     .eggs {
-      transform: scale(1);
+      transform: scale(1.3);
 
       &.egg_zoro {
         // transform: translateX(20px)
@@ -260,7 +298,9 @@
 
   @media #{$sm-layout} {
     .eggs_container_pd {
-      padding: 105px 0;
+      // padding: 105px 0;
+      padding: 60px 0 40px;
+
     }
 
     .logo_img {
@@ -270,7 +310,7 @@
 
   @media #{$large-mobile} {
     .eggs_container_pd {
-      padding: 105px 0;
+      padding: 60px 0;
 
       .eggs {
         transform: scale(1.3);
@@ -278,22 +318,12 @@
       }
 
     }
-  }
-
-  @media #{$large-mobile} {
-    .eggs_container_pd {
-      padding: 110px 0;
-
-      .eggs {
-        transform: scale(1.3);
-
-      }
-    }
-
   }
 
   @media #{$small-mobile} {
     .eggs_container_pd {
+      padding: 80px 0 60px;
+
       .eggs {
         &:nth-child(1) img {
           transform: translateX(-30px) scale(1.8) !important;

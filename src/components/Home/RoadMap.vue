@@ -3,7 +3,7 @@
     <div class="container ptb--120 zid_1">
       <sub-title title="ROADMAP" />
       <a-row type="flex" class="jcc aic fdc ptb--40">
-        <a-col :xs="24" :md="18">
+        <a-col :sm="24" :md="18">
           <p class="white text-center">FOMO Stone is just the beginning - once you have FOMO Stone(s), you will embark
             on
             an exciting
@@ -14,21 +14,21 @@
         </a-col>
       </a-row>
       <a-row type="flex" class="jcc ais tab_container" style="box-sizing: border-box;">
-        <a-col :xs="24" :md="6" class="flex fdc">
+        <a-col :sm="24" :md="24" :lg="6" class="flex fdc">
           <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 1}" @click="tabActive = 1">
-            <h4>Spring 2022: Are You Ready!?</h4>
+            <h4 :class="{'font-outline': tabActive == 1}">Spring 2022: Are You Ready!?</h4>
           </a-col>
           <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 2}" @click="tabActive = 2">
-            <h4>Look Forward to Everything We Are Bringing to MM </h4>
+            <h4 :class="{'font-outline': tabActive == 2}">Look Forward to Everything We Are Bringing to MM </h4>
           </a-col>
           <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 3}" @click="tabActive = 3">
-            <h4>Summer: Grand and Adventurous Journey Begins</h4>
+            <h4 :class="{'font-outline': tabActive == 3}">Summer: Grand and Adventurous Journey Begins</h4>
           </a-col>
           <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 4}" @click="tabActive = 4">
-            <h4>Fall-Spring: Not Just a Typical Metaverse</h4>
+            <h4 :class="{'font-outline': tabActive == 4}">Fall-Spring: Not Just a Typical Metaverse</h4>
           </a-col>
         </a-col>
-        <a-col :xs="24" :md="18" class="tab_content">
+        <a-col :sm="24" :md="24" :lg="18" class="tab_content">
           <div v-if="tabActive == 1">
             <p>
               No matter how you found out about us, we’re sure that you love manga and are excited for what’s to come
@@ -123,7 +123,7 @@
           top: false,
           bottom: true,
           color: 'purple', // purple | blue
-          stars: 'gray', // gray | purple
+          stars: true, // gray | purple
           fill: false
         },
         tabActive: 1,
@@ -141,6 +141,11 @@
         color: $white;
         padding: 15px;
         margin: 0;
+
+        &:hover {
+          color: #00FFFF;
+
+        }
       }
 
       &.active {
@@ -151,7 +156,6 @@
 
         h4 {
           color: #00FFFF;
-
         }
       }
 
@@ -163,17 +167,20 @@
       border: 1px solid #00FFFF;
       color: #00FFFF;
       position: relative;
+      height: 400px;
+      overflow-y: scroll;
+      background-color: rgba(#00FFFF, .1);
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: #00FFFF;
-        opacity: .1;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   top: 0;
+      //   left: 0;
+      //   background-color: #00FFFF;
+      //   opacity: .1;
+      // }
 
     }
   }

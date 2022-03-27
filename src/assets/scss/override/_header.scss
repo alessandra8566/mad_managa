@@ -29,8 +29,8 @@
   }
 
   .login-circle {
-    width: 7rem;
-    height: 7rem;
+    width: 6rem;
+    height: 8rem;
     font-size: 16px;
     font-weight: 500;
     color: $white;
@@ -44,6 +44,7 @@
       border-radius: 0%;
       border-top-right-radius: 100px;
       background-color: rgba(0,0,0,.85);
+      pointer-events: none;
     }
   }
 
@@ -71,15 +72,27 @@
 }
 
 .login_contain {
-  width: 100vw;
-  height: 100vh !important;
+  width: 80vw;
+  height: 80vh !important;
   position: fixed;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   height: 0;
   z-index: 100;
-  pointer-events: none;
   .login_connect {
     max-width: 300px;
+    opacity: 0;
+    animation: login-fade .5s linear .5s forwards;
+    @keyframes login-fade {
+      0% {
+        opacity: 0;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
   }
   
   .login-btn {
@@ -91,6 +104,11 @@
     &.ant-btn-round.ant-btn-lg {
       padding: 10px 20px !important;
       height: auto;
+      &:hover {
+        background-color: $white !important;
+        color: black !important;
+        border: 1px solid $white;
+      }
     }
   }
     

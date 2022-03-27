@@ -1,4 +1,4 @@
-const meteorCount = 12;
+const meteorCount = 6;
 const starCount = 0;
 const maxSize = 5;
 const maxSpeed = 3;
@@ -98,8 +98,8 @@ export class Meteor {
     this.context = this.el.getContext("2d");
     // this.context.globalCompositeOperation = 'destination-out';
 
-    this.el.width = element.offsetWidth;
-    this.el.height = element.offsetHeight ;
+    this.el.width = window.innerWidth;
+    this.el.height = window.innerHeight;
     console.log(this.el.width, this.el.height)
     this.t = 0;
     this.meteorites = [];
@@ -111,12 +111,12 @@ export class Meteor {
   }
 
   bind() {
-    window.addEventListener("resize", this.resize(this.el));
+    window.addEventListener("resize", this.resize());
   }
 
   resize(element) {
-    this.el.width = element.offsetWidth;
-    this.el.height = element.offsetHeight ;
+    this.el.width = window.innerWidth;
+    this.el.height = window.innerHeight;
     this.meteorites = [];
     this.stars = [];
     this.init();

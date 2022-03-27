@@ -8,10 +8,12 @@
 
   [data-black-overlay]:before {
     background-color: #48009F;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .my_footer {
+    margin-top: -20px;
+
     p {
       font-size: .8rem !important;
       font-weight: normal;
