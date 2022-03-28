@@ -1,10 +1,12 @@
 <template>
   <div>
-    <full-page :options="fullpageOption" id="fullpage" ref="fullpage">
-      <Home id="Home" class="section" />
-      <Madmanga id="Madmanga" class="section" :start="videostatus" />
-      <Story id="Story" class="section" />
-    </full-page>
+    <!-- <full-page :options="fullpageOption" id="fullpage" ref="fullpage"> -->
+    <div class="por">
+      <Home id="Home" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
+      <Madmanga id="Madmanga" class="parallax-sticky-start" :start="videostatus" :style="`--sticky-height: 100vh`" />
+      <Story id="Story" class="" />
+    </div>
+    <!-- </full-page> -->
     <Evolution id="Evolution" />
     <Thunder id="Thunder" />
     <!-- <Box /> -->
@@ -58,13 +60,6 @@
           fitToSection: false,
           css3: true,
           scrollBar: true,
-          // scrollOverflow: true,
-          // onLeave: (oldVal, newVal, direction) => {
-          //   // console.log(index, nextIndex, direction)
-          //   if (oldVal.index == 2 && direction == 'up') {
-          //     this.fullpageElement.api.setAutoScrolling(true)
-          //   }
-          // },
           afterLoad: (oldVal, newVal) => {
             const _this = this;
             _this.videostatus = newVal.index == 1 ? true : false
@@ -79,14 +74,7 @@
         window.onscroll = () => {
           const offsetTop = document.documentElement.scrollTop
           _this.$store.dispatch('home/updateCurrentScrollTop', offsetTop)
-          // _this.$store.dispatch('home/updateOffsetTops', this.getTop())
-          if (offsetTop == 0) this.fullpageElement.api.setAutoScrolling(true)
-
-          // const element = $("#Story").offset()
-          // console.log(offsetTop)
-          // if ((element.top - offsetTop) > 0) {
-          //   _this.$refs.fullpage.api.setAutoScrolling(true)
-          // }
+          if (!_this.videostatus) _this.videostatus = offsetTop > _this.offsetTops.Madmanga ? true : false
         };
       },
     },
@@ -96,9 +84,6 @@
     mounted() {
       this.scroll()
       this.$store.dispatch('home/updateOffsetTops', this.getTop())
-      this.$store.dispatch('home/updateFullpageElement', this.$refs.fullpage)
-      // console.log(this.$refs.fullpage)
-      // console.log(this.$refs.fullpage.options.autoScrolling)
     }
   }
 </script>

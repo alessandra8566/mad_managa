@@ -6,7 +6,7 @@
           <div class="width100 flex jcc aic">
             <img src="/images/logo/LOGO.svg" class="width100 logo_img neon-svg">
           </div>
-          <div class="text-center">
+          <div class="text-center home_text_container">
             <h3 class="white mar_0">THE LARGEST</h3>
             <h2 class="white mar_0 font-regular neon-blue zid_1">MANGA-CREATIONS</h2>
             <h1 class="white mar_0 font-regular neon-red zid_0">METAVERSE</h1>
@@ -65,23 +65,7 @@
       ...mapState('home', ['currentScrollTop', 'offsetTops'])
     },
     mounted() {},
-    watch: {
-      currentScrollTop(newVal, oldVal) {
-        // 判斷往上還是往下
-        // const direction = newVal > oldVal ? 'down' : 'up'
-        // if (!this.isScrolling) {
-        //   if (direction == "down") {
-        //     if (newVal < this.offsetTops.Madmanga && newVal > this.offsetTops.Home) {
-        //       this.isScrolling = true
-        //       window.scrollTo({
-        //         top: this.offsetTops.Madmanga,
-        //         behavior: 'smooth'
-        //       })
-        //     }
-        //   }
-        // }
-      }
-    }
+    watch: {}
   };
 </script>
 
@@ -102,10 +86,19 @@
   }
 
   .logo_img {
-    max-width: 360px;
+    padding-left: 25px;
+    max-width: 450px;
   }
 
+  .home_text_container {
+    h2 {
+      letter-spacing: 2px;
+    }
 
+    h4 {
+      letter-spacing: .5px;
+    }
+  }
 
   .eggs {
     transform: scale(1.6);
@@ -294,6 +287,17 @@
 
       }
     }
+
+    .home_text_container {
+      h2 {
+        letter-spacing: 0px;
+      }
+    }
+
+    .logo_img {
+      padding-left: 0;
+      max-width: 330px;
+    }
   }
 
   @media #{$sm-layout} {
@@ -302,6 +306,13 @@
       padding: 60px 0 40px;
 
     }
+
+    .home_text_container {
+      h1 {
+        letter-spacing: 5px;
+      }
+    }
+
 
     .logo_img {
       max-width: 300px;
@@ -317,6 +328,10 @@
 
       }
 
+    }
+
+    .logo_img {
+      max-width: 280px;
     }
   }
 

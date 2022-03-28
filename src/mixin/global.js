@@ -20,6 +20,14 @@ export default {
       }
       return offsetTops
     },
+    isScrollToFinished(currentScrollTop, targetScrollTop) {
+      const checkIfScrollToIsFinished = setInterval(() => {
+          if (currentScrollTop === targetScrollTop) {
+              // do something
+              clearInterval(checkIfScrollToIsFinished);
+          }
+      }, 25);
+    }
   },
   computed: {
     ...mapState('home', ['currentScrollTop', 'offsetTops'])

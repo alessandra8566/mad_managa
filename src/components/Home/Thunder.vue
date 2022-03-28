@@ -24,44 +24,45 @@
                 </div>
               </div>
             </div>
-            <div class="flex jcc aic por width100 ptb--40 zid_5 think_container">
-              <div class="think flex jcc aic fdc">
-                <span class="block"></span>
-                <span class="block"></span>
-                <span class="block"></span>
-                <span class="block"></span>
-                <span class="block"></span>
-              </div>
-              <p class="white text-center po_center width100" style="write-space: nowrap;">
-                Which FOMO Stone
-                combinations will
-                you get
-              </p>
-            </div>
+            <h3 class="white text-center zid_1 width100 font-regular ptb--20 mar_0"
+              style="font-size: 32px !important; line-height: 40px">
+              Which FOMO Stone
+              combinations will
+              you get
+            </h3>
 
           </div>
         </div>
       </div>
     </thunder-bg>
     <div class="my_parallax" id="Parallax">
-      <thunder-bg :style="`overflow-x: hidden; --sticky-height: ${950}px`" class="parallax-sticky-start">
-        <div class="thunder_container zid_5 pt--40" style="">
+      <thunder-bg :style="`overflow-x: hidden; --sticky-height: 100vh`" class="parallax-sticky-start">
+        <div class="flex jcc aic por width100 pt--20 zid_5 think_container">
+          <div class="think flex jcc aic fdc">
+            <span class="block"></span>
+            <span class="block"></span>
+            <span class="block"></span>
+            <span class="block"></span>
+            <span class="block"></span>
+          </div>
+        </div>
+        <div class="thunder_container zid_5" style="">
           <div class="container">
-            <div class="fomo_hiro_img_container por  width100 flex jcc aic">
+            <div class="fomo_hiro_img_container por width100 flex jcc aic">
               <img src="/images/mad_mange/fomo-hiro-cut.png" class="zid_2 por fomo_hiro_img" alt="">
               <div class="fomo_hiro_marquee" style="width: 200%;">
                 <Marquee move-to="left" class="zid_1">
                   <h1 class="white font-regular marquee_font">
-                    what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
+                    What’s It Gonna Be?! What’s It Gonna Be?! What’s It Gonna
                     Be?!
-                    what’s It Gonna Be?!
-                    what’s It Gonna Be?!what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
+                    What’s It Gonna Be?!
+                    What’s It Gonna Be?!What’s It Gonna Be?! What’s It Gonna Be?! What’s It Gonna Be?! What’s It Gonna
                     Be?!
-                    what’s It Gonna Be?!
-                    what’s It Gonna Be?!what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna Be?! what’s It Gonna
+                    What’s It Gonna Be?!
+                    What’s It Gonna Be?!What’s It Gonna Be?! What’s It Gonna Be?! What’s It Gonna Be?! What’s It Gonna
                     Be?!
-                    what’s It Gonna Be?!
-                    what’s It Gonna Be?!what’s It Gonna Be?!</h1>
+                    What’s It Gonna Be?!
+                    What’s It Gonna Be?!What’s It Gonna Be?!</h1>
                 </Marquee>
               </div>
               <div class="circle"></div>
@@ -101,48 +102,12 @@
       this.fomo_img_height = document.getElementsByClassName("fomo_hiro_img")[0].offsetHeight
     },
     watch: {
-      currentScrollTop(newVal) {
-        // if (newVal >= this.offsetTops.Parallax) {
-        //   $(".my_parallax").addClass("start_parallax")
-        // } else {
-        //   $(".my_parallax").removeClass("start_parallax")
-
-        // }
-      }
+      currentScrollTop(newVal) {}
     }
   }
 </script>
 
 <style lang="scss">
-  .start_parallax {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-  }
-
-  .parallax-sticky-start {
-    position: sticky !important;
-    top: calc(var(--sticky-height) * -1 + 100vh)
-  }
-
-  .parallax-sticky-end {
-    position: relative !important;
-    overflow: hidden;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
   $OpacityStart: 80;
   $animate: move-right,
   move-left;
@@ -178,7 +143,7 @@
   @mixin p-move($myAnimate) {
     color: $white;
     white-space: nowrap;
-    font-size: #{$fontSizeMin + floor(random(($fontSizeMax - $fontSizeMin) + 1))}px;
+    font-size: #{$fontSizeMin + floor(random(($fontSizeMax - $fontSizeMin) + 1))}px !important;
     opacity: random($OpacityStart) / 100;
     animation: $myAnimate $animateDuration linear #{(random($animateDelay) / 100) + s} infinite;
   }
@@ -187,17 +152,17 @@
   .fomo_hiro_img_container {
 
     img {
-      max-width: 400px;
+      max-width: 350px;
     }
 
     .circle {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 40vw;
-      height: 40vw;
-      max-width: 750px;
-      max-height: 750px;
+      width: 80vw;
+      height: 80vw;
+      max-width: 600px;
+      max-height: 600px;
       transform: translate(-50%, -50%);
       border-radius: 100%;
       background: rgb(113, 199, 213);
@@ -216,8 +181,8 @@
 
   .think {
     span {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       position: relative;
 
       &::before {
@@ -242,7 +207,7 @@
         &::before {
           width: 30px;
           height: 30px;
-          transform: translate(-30px, -100%);
+          transform: translate(-40px, -100%);
         }
       }
 

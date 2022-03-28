@@ -48,6 +48,17 @@
 }
 
 
+// parallax
+.parallax-sticky-start {
+  position: sticky !important;
+  top: calc(var(--sticky-height) * -1 + 100vh)
+}
+
+.parallax-sticky-end {
+  position: relative !important;
+  overflow: hidden;
+}
+
 // ==== neon ==== //
 .neon-red {
   animation: neon-red 1.5s ease-in-out infinite alternate;

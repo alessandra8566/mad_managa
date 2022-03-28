@@ -18,7 +18,7 @@
       <Marquee moveTo="left" class="poa egglist_marquee">
         <div class="flex jcc aic nowrap">
           <div v-for="(item, ind) in eggList" :key="ind" class="flex jcc aic fdc text-center flex1">
-            <h3 class="white mar_0">{{ item.title }}</h3>
+            <h3 class="white mar_0 font-regular">{{ item.title }}</h3>
             <p class="white"> {{ item.content }}</p>
             <img :src="item.img">
           </div>

@@ -2,7 +2,7 @@
   <div class="video_container flex jcc hidden">
     <!-- <video-bg :sources="['/video/madmanga.mp4']" :muted="false" /> -->
     <div class="height100 por">
-      <video ref="videoPlayer" class="video-js vjs-default-skin poa_center" x5-video-player-fullscreen="true"
+      <video ref="videoPlayer" class="video-js vjs-default-skin po_center" x5-video-player-fullscreen="true"
         x5-playsinline playsinline webkit-playsinline></video>
     </div>
   </div>
@@ -60,5 +60,6 @@
     // height: 100vh;
     z-index: 0;
     background-color: #000;
+    height: 100vh;
   }
 </style>

@@ -1,50 +1,51 @@
 <template>
-  <div id="box" class="por">
-    <div class="about-area bg_color--1">
-      <div class="about-wrapper">
-        <div class="container">
-          <a-row type="flex" class="jcc aic fdc">
-            <a-col :xs="12">
-              <!-- JJ -->
-              <div class="page">
-                <div class="box_container">
-                  <div class="shadow-wrapper">
-                    <div class="shadow">
-                      <div>&nbsp;</div>
-                    </div>
+  <div id="box" class="por flex jcc aic">
+    <div class="container ptb--120">
+      <a-row type="flex" class="jcc aic fdc">
+        <!-- <a-col :xs="12">
+          <div class="page">
+            <div class="box_container">
+              <div class="shadow-wrapper">
+                <div class="shadow">
+                  <div>&nbsp;</div>
+                </div>
+              </div>
+              <div class="box-wrapper">
+                <div class="box-faces">
+                  <div class="box-face box-face--is-front">
+                    <p v-html="myicon"></p>
                   </div>
-                  <div class="box-wrapper">
-                    <div class="box-faces">
-                      <div class="box-face box-face--is-front">
-                        <p v-html="myicon"></p>
-                      </div>
-                      <div class="box-face box-face--is-back">
-                        <p v-html="myicon"></p>
-                      </div>
-                      <div class="box-face box-face--is-top">&nbsp;</div>
-                      <div class="box-face box-face--is-bottom">&nbsp;</div>
-                      <div class="box-face box-face--is-left">
-                        <p v-html="myicon"></p>
-                      </div>
-                      <div class="box-face box-face--is-right">
-                        <p v-html="myicon"></p>
-                      </div>
-                    </div><!-- end of .box -->
-                  </div><!-- end of .box-wrapper -->
-                </div><!-- /.container -->
-              </div><!-- /.page -->
-            </a-col>
-            <a-col :xs="24" :md="18" class="flex jcc aic fdc" style="">
-              <img src="/images/logo/logo_b.png" class="pb--60 pt--120 box_logo" style="max-width: 150px" alt="">
-              <p class="text-center">Our mission is to build the largest manga community as well as the best
-                manga story
-                on the blockchain
-                while providing the most comprehensive curation platform for creators, manga artists, storytellers, and
-                fans alike that can rival many big-name manga series in existence with multitude of unique features.</p>
-            </a-col>
-          </a-row>
-        </div>
-      </div>
+                  <div class="box-face box-face--is-back">
+                    <p v-html="myicon"></p>
+                  </div>
+                  <div class="box-face box-face--is-top">&nbsp;</div>
+                  <div class="box-face box-face--is-bottom">&nbsp;</div>
+                  <div class="box-face box-face--is-left">
+                    <p v-html="myicon"></p>
+                  </div>
+                  <div class="box-face box-face--is-right">
+                    <p v-html="myicon"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a-col> -->
+
+        <a-col :xs="24" :md="18" class="flex jcc aic fdc" style="">
+          <!-- <img src="/images/logo/logo_b.png" class="pb--60 pt--120 box_logo" style="max-width: 150px" alt=""> -->
+          <img src="/images/mad_mange/box.png" class="box_logo" style="max-width: 500px" alt="">
+          <h3 class="white font-regular text-center pb--20 pt--40 box_logo" style="line-height: 32px">Lorem ipsum dolor
+            sit amet consectetur
+            adipisicing elit.
+          </h3>
+          <p class="text-center white">Our mission is to build the largest manga community as well as the best
+            manga story
+            on the blockchain
+            while providing the most comprehensive curation platform for creators, manga artists, storytellers, and
+            fans alike that can rival many big-name manga series in existence with multitude of unique features.</p>
+        </a-col>
+      </a-row>
     </div>
   </div>
 </template>
@@ -92,7 +93,9 @@
 
   #box {
     height: 100vh;
-    background-color: $white;
+    background-image: url('/images/mad_mange/grid/box_floor.png');
+    background-size: cover;
+    // background-color: $white;
   }
 
   .page {

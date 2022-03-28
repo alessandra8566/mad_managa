@@ -123,14 +123,9 @@
     methods: {
 
       scrollTo(id) {
-        // const autoScrollingStatus = this.fullpageElement.api.test.options.autoScrolling
         this.$store.dispatch('home/updateOffsetTops', this.getTop())
-        // console.log(autoScrollingStatus)
-        // if (autoScrollingStatus) this.fullpageElement.api.setAutoScrolling(false)
-        // console.log(this.fullpageElement.api.test.options.autoScrolling)
-        // this.fullpageElement.api.destroy()
         window.scrollTo({
-          top: this.offsetTops[id],
+          top: id == 'Home' ? 0 : this.offsetTops[id],
           behavior: 'smooth'
         })
       },
