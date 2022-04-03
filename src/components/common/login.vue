@@ -9,10 +9,10 @@
     </div>
     <div class="login_contain flex jcc aic" v-if="isLoginOpen">
       <div class="login_connect flex jcc aic fdc">
-        <h1 class=" text-center white font-regular mar_0">CONNECT</h1>
+        <h1 class=" text-center white font-regular mar_0">METAMASK</h1>
         <img src="/images/mad_mange/metamask.png" class="width100 login_dog" alt="">
         <div class="wid100 flex jcc aic mart_2">
-          <a-button class="login-btn white" shape="round" size="large">LOGIN</a-button>
+          <a-button class="login-btn white" shape="round" size="large">CONNECT</a-button>
         </div>
       </div>
     </div>

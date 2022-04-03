@@ -35,9 +35,9 @@
         <a-col :xs="24" :md="18" class="flex jcc aic fdc" style="">
           <!-- <img src="/images/logo/logo_b.png" class="pb--60 pt--120 box_logo" style="max-width: 150px" alt=""> -->
           <img src="/images/mad_mange/box.png" class="box_logo" style="max-width: 500px" alt="">
-          <h3 class="white font-regular text-center pb--20 pt--40 box_logo" style="line-height: 32px">Lorem ipsum dolor
-            sit amet consectetur
-            adipisicing elit.
+          <h3 class="white font-regular text-center pb--20 pt--40 box_logo"
+            style="line-height: 32px; letter-spacing: 1px">
+            THE LARGEST MANGA-CREATIONS METAVERSE
           </h3>
           <p class="text-center white">Our mission is to build the largest manga community as well as the best
             manga story
@@ -95,6 +95,8 @@
     height: 100vh;
     background-image: url('/images/mad_mange/grid/box_floor.png');
     background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
     // background-color: $white;
   }
 
@@ -231,7 +233,7 @@
     }
 
     .box_logo {
-      padding-bottom: 40px;
+      // padding-bottom: 40px;
     }
 
     .box-wrapper {

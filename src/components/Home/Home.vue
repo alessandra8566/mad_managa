@@ -4,25 +4,26 @@
       <a-row style="z-index: 10;" type="flex" class="ais jcc">
         <a-col :lg="12" :md="24" class="">
           <div class="width100 flex jcc aic">
-            <img src="/images/logo/LOGO.svg" class="width100 logo_img neon-svg">
+            <img src="/images/logo/LOGO.svg" class="width100 logo_img">
           </div>
           <div class="text-center home_text_container">
-            <h3 class="white mar_0">THE LARGEST</h3>
+            <h3 class="white mar_0">The Largest</h3>
             <h2 class="white mar_0 font-regular neon-blue zid_1">MANGA-CREATIONS</h2>
             <h1 class="white mar_0 font-regular neon-red zid_0">METAVERSE</h1>
-            <h4 class="white mar_0">Let your imageination roam free.</h4>
+            <h4 class="white mar_0" :style="`letter-spacing: ${ismobile ? 0 : 1}px`">Let Your Imagination Roam Free.
+            </h4>
           </div>
         </a-col>
         <a-col :lg="12" :md="24" class="flex jcfs aic eggs_container_pd">
           <div class="eggs_container flex jcfs">
             <div class="eggs egg_zoro">
-              <img src="/images/mad_mange/eggs/Zoro.png" class="eggs" alt="">
+              <img src="/images/mad_mange/eggs/home/h-01.png" class="eggs" alt="">
             </div>
             <div class="eggs egg_blackbread">
-              <img src="/images/mad_mange/eggs/Blackbeard.png" class="eggs" alt="">
+              <img src="/images/mad_mange/eggs/home/h-02.png" class="eggs" alt="">
             </div>
             <div class="eggs egg_andrea">
-              <img src="/images/mad_mange/eggs/Andrea.png" class="eggs" alt="">
+              <img src="/images/mad_mange/eggs/home/h-03.png" class="eggs" alt="">
             </div>
           </div>
         </a-col>
@@ -55,7 +56,8 @@
           stars: false,
           shootingStars: false
         },
-        isScrolling: false
+        isScrolling: false,
+        ismobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
       };
     },
     methods: {
@@ -96,7 +98,8 @@
     }
 
     h4 {
-      letter-spacing: .5px;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
   }
 
@@ -104,19 +107,19 @@
     transform: scale(1.6);
 
     &.egg_zoro {
-      // transform: translateX(20px)
+      transform: translateX(0px);
       animation: swing-up-down-zoro 3s linear infinite;
 
     }
 
     &.egg_blackbread {
-      // transform: translateX(-20px)
+      transform: translateX(-20px);
       animation: swing-up-down-blackbread 5s linear infinite;
 
     }
 
     &.egg_andrea {
-      // transform: translateX(-60px)
+      transform: translateX(-40px);
       animation: swing-up-down-andrea 4s linear infinite;
 
     }
@@ -269,20 +272,20 @@
       transform: scale(1.3);
 
       &.egg_zoro {
-        // transform: translateX(20px)
+        transform: translateX(40%);
         animation: swing-up-down-zoro-md 3s linear infinite;
 
       }
 
       &.egg_blackbread {
-        // transform: translateX(-20px)
+        transform: translateX(0%);
         animation: swing-up-down-blackbread-md 5s linear infinite;
         z-index: 2;
 
       }
 
       &.egg_andrea {
-        // transform: translateX(-60px)
+        transform: translateX(-40%);
         animation: swing-up-down-andrea-md 4s linear infinite;
 
       }
@@ -290,7 +293,17 @@
 
     .home_text_container {
       h2 {
-        letter-spacing: 0px;
+        letter-spacing: 0px !important;
+        font-weight: 400 !important;
+      }
+
+      h3 {
+        font-size: 20px !important;
+      }
+
+      h4 {
+        font-weight: 900 !important;
+        font-size: 15px !important;
       }
     }
 

@@ -1,6 +1,7 @@
 <template>
-  <div class="video_container">
-    <video-bg :sources="['/video/meteorite.mp4']" v-if="!ismobile">
+  <div class="comic_container flex jcc aic fdc">
+    <sub-title title="Story" class="pt--120" />
+    <!-- <video-bg :sources="['/video/meteorite.mp4']" v-if="!ismobile">
       <div class="container ptb--120 flex jcc aic fdc height100">
         <sub-title title="Story" />
         <a-row type="flex" class="pt--40 flex jcc aic story">
@@ -43,7 +44,9 @@
           </a-col>
         </a-row>
       </div>
-    </div>
+    </div> -->
+    <img v-if="currentWidth > 575" src="/images/mad_mange/comic/comic.jpg" class="" style="max-width: 1140px" alt="">
+    <img v-else src="/images/mad_mange/comic/comic-575.jpg" class="width100" alt="">
   </div>
 </template>
 
@@ -63,11 +66,12 @@
     data() {
       return {
         player: null,
-        ismobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        ismobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+
       }
     },
     computed: {
-      ...mapState('home', ['currentScrollTop'])
+      ...mapState('home', ['currentScrollTop', 'currentWidth'])
 
     },
     mounted() {
@@ -83,43 +87,44 @@
   }
 </script>
 <style lang="scss" scoped>
-  .video_container {
+  .comic_container {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    // height: 100vh;
     z-index: 0;
+    background-color: #000;
 
 
-    &:before {
-      content: "";
-      width: 100%;
-      height: 120px;
-      position: absolute;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      background: -o-linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
+    // &:before {
+    //   content: "";
+    //   width: 100%;
+    //   height: 120px;
+    //   position: absolute;
+    //   background: linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   background: -o-linear-gradient(180deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 1;
+    // }
 
-    &::after {
-      content: "";
-      width: 100%;
-      height: 120px;
-      position: absolute;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      background: -o-linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-    }
+    // &::after {
+    //   content: "";
+    //   width: 100%;
+    //   height: 120px;
+    //   position: absolute;
+    //   background: linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   background: -o-linear-gradient(0deg, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 0)100%);
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   z-index: 1;
+    // }
 
   }
 

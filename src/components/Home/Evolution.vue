@@ -39,19 +39,19 @@
       </Marquee>
       <div class="flex jcc" id="evolation">
         <div class="animation_1 zid_1 animate__animated">
-          <img src="/images/mad_mange/eggs/Zoro.png" class="width100 evolation_scale third left" alt="">
+          <img src="/images/mad_mange/eggs/evolution/e-01.png" class="width100 evolation_scale third left" alt="">
         </div>
         <div class="animation_2 zid_2 animate__animated">
-          <img src="/images/mad_mange/eggs/FS-014.png" class="width100 evolation_scale second left" alt="">
+          <img src="/images/mad_mange/eggs/evolution/e-02.png" class="width100 evolation_scale second left" alt="">
         </div>
         <div class="animation_3 zid_3 animate__animated">
-          <img src="/images/mad_mange/eggs/Luffy_Chopper.png" class="width100 evolation_scale first" style="" alt="">
+          <img src="/images/mad_mange/eggs/evolution/e-03.png" class="width100 evolation_scale first" style="" alt="">
         </div>
         <div class="animation_4 zid_2 animate__animated">
-          <img src="/images/mad_mange/eggs/FS-024.png" class="width100 evolation_scale second right" alt="">
+          <img src="/images/mad_mange/eggs/evolution/e-04.png" class="width100 evolation_scale second right" alt="">
         </div>
         <div class="animation_5 zid_1 animate__animated">
-          <img src="/images/mad_mange/eggs/Nami.png" class="width100 evolation_scale third right" alt="">
+          <img src="/images/mad_mange/eggs/evolution/e-05.png" class="width100 evolation_scale third right" alt="">
         </div>
       </div>
       <div class="circle"></div>

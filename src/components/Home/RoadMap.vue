@@ -2,7 +2,7 @@
   <grid3d :options="gridOption">
     <div class="container ptb--120 zid_1">
       <sub-title title="ROADMAP" />
-      <a-row type="flex" class="jcc aic fdc ptb--40">
+      <a-row type="flex" class="jcc aic fdc pt--40" :class="{'pb--40': currentWidth > 991}">
         <a-col :sm="24" :md="18">
           <p class="white text-center">FOMO Stone is just the beginning - once you have FOMO Stone(s), you will embark
             on
@@ -14,8 +14,9 @@
         </a-col>
       </a-row>
       <a-row type="flex" class="jcc ais tab_container" style="box-sizing: border-box;">
-        <a-col :sm="24" :md="24" :lg="6" class="flex fdc">
-          <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 1}" @click="tabActive = 1">
+        <a-col :sm="24" :md="24" :lg="8" class="flex aifn"
+          :class="{'pr--40': currentWidth > 991, 'width100': currentWidth <= 991}">
+          <!-- <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 1}" @click="tabActive = 1">
             <h4 :class="{'font-outline': tabActive == 1}">Spring 2022: Are You Ready!?</h4>
           </a-col>
           <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 2}" @click="tabActive = 2">
@@ -26,10 +27,24 @@
           </a-col>
           <a-col class="tab flex1 flex aic width100" :class="{'active': tabActive == 4}" @click="tabActive = 4">
             <h4 :class="{'font-outline': tabActive == 4}">Fall-Spring: Not Just a Typical Metaverse</h4>
-          </a-col>
+          </a-col> -->
+          <a-timeline :mode="'right'" style="height: 340px" class="flex fdc jcc width100">
+            <a-timeline-item :class="{'active': tabActive == 1}" @click="tabActive = 1">
+              <h2 class="font-regular white" style="transform: translateY(-35%)">Spring</h2>
+            </a-timeline-item>
+            <a-timeline-item :class="{'active': tabActive == 2}" @click="tabActive = 2" class="summer-timeline">
+              <h2 class="font-regular white" style="transform: translateY(-35%)">Summer</h2>
+            </a-timeline-item>
+            <a-timeline-item :class="{'active': tabActive == 3}" @click="tabActive = 3" class="fall-spring-timeline">
+              <h2 class="font-regular white" style="transform: translateY(-35%)">Fall-Spring</h2>
+            </a-timeline-item>
+            <a-timeline-item class="last_timeline">
+            </a-timeline-item>
+          </a-timeline>
         </a-col>
-        <a-col :sm="24" :md="24" :lg="18" class="tab_content">
+        <a-col :sm="24" :md="24" :lg="16" class="tab_content">
           <div v-if="tabActive == 1">
+            <h3>Spring 2022: Are You Ready!?</h3>
             <p>
               No matter how you found out about us, we’re sure that you love manga and are excited for what’s to come
               for MadManga. This is the time that you and your friends should join our community.
@@ -39,8 +54,8 @@
             <p>This will be the start of an epic story, taking you on a journey through incubation, growth, and wild
               adventure through stories from various artists/creators.</p>
             <p>Don’t forget, FOMO Stones are limited! If you miss out, YOU WILL REGRET IT!</p>
-          </div>
-          <div v-if="tabActive == 2">
+
+            <h3>Look Forward to Everything We Are Bringing to MM</h3>
             <p>
               Being the largest manga creation community, we are combining everything that fans love, because we have
               collaborated and worked with well-known intellectual property owners such as ONE PIECE, Disney, and Naruto
@@ -55,7 +70,8 @@
               be just the beginning to everything.
             </p>
           </div>
-          <div v-if="tabActive == 3">
+          <div v-if="tabActive == 2">
+            <h3>Summer: Grand and Adventurous Journey Begins</h3>
             <p>MadManga team are all hardcore manga and anime fans, therefore we truly understand the devotion fans put
               into a manga they love, and the assiduous effort creators submit to paint their wildness dreams onto their
               manga paper. We plan to bringing you closer to all the actions you’ve never experienced before - where
@@ -70,7 +86,8 @@
               to becoming the biggest manga creation community where we grow together with everyone who shares a same
               passion for manga.</p>
           </div>
-          <div v-if="tabActive == 4">
+          <div v-if="tabActive == 3">
+            <h3>Fall-Spring</h3>
             <p>There is no winter in the MadManga community. With our strong team and wealth of resources, we will be
               the largest web3 manga community in the world and it won’t just be a slogan. You will be part of this
               journey with us in making the world’s first epic-scale manga series in the web3 world by holding MadManga
@@ -112,6 +129,9 @@
 <script>
   import SubTitle from '../common/subtitle.vue'
   import grid3d from '../common/grid3d.vue'
+  import {
+    mapState
+  } from 'vuex'
   export default {
     components: {
       SubTitle,
@@ -128,7 +148,11 @@
         },
         tabActive: 1,
       }
-    }
+    },
+    computed: {
+      ...mapState('home', ['currentWidth'])
+    },
+    mounted() {}
   }
 </script>
 
@@ -163,13 +187,20 @@
     }
 
     .tab_content {
-      padding: 15px;
+      padding: 20px;
       border: 1px solid #00FFFF;
       color: #00FFFF;
       position: relative;
       height: 400px;
       overflow-y: scroll;
       background-color: rgba(#00FFFF, .1);
+
+      h3 {
+        color: #00FFFF;
+        font-weight: bold;
+        line-height: 32px;
+        margin-bottom: 30px;
+      }
 
       // &::before {
       //   content: "";
@@ -185,6 +216,53 @@
     }
   }
 
+  .ant-timeline {
+    .ant-timeline-item {
+      cursor: pointer;
+
+      .ant-timeline-item-head {
+        width: 20px;
+        height: 20px;
+        border: 2px solid $white;
+        background-color: #000;
+        left: auto !important;
+        right: 0;
+        transform: translateX(25%);
+
+      }
+
+      &.active {
+        .ant-timeline-item-head {
+          background-color: #00FFFF;
+          border: 2px solid #00FFFF;
+        }
+
+        .ant-timeline-item-content {
+          h2 {
+            color: #00FFFF !important;
+          }
+        }
+
+
+      }
+
+      &.last_timeline {
+        .ant-timeline-item-head {
+          display: none !important;
+        }
+      }
+
+      .ant-timeline-item-content {
+        // width: calc(100% - 30px) !important;
+        width: auto !important;
+
+        h2 {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+
   @media #{$md-layout} {
     .tab_container {
       .tab {
@@ -195,6 +273,62 @@
           border-right: none;
           border-left: none;
           border-bottom: 1px solid #00FFFF;
+        }
+      }
+    }
+
+    .ant-timeline {
+      width: 50%;
+      transform: translateY(20%);
+
+      .ant-timeline-item {
+        padding: 0;
+      }
+
+
+      .fall-spring-timeline {
+        .ant-timeline-item-tail {
+          height: 78px !important;
+        }
+      }
+
+      .summer-timeline {
+        .ant-timeline-item-content h2 {
+          transform: translate(100%, -35%) !important;
+          padding: 0;
+          padding-left: 1.5rem;
+          text-align: left !important;
+        }
+      }
+    }
+
+  }
+
+  @media #{$sm-layout} {
+    .ant-timeline {
+      transform: translateY(22%);
+    }
+  }
+
+  @media #{$small-mobile} {
+    .ant-timeline {
+      height: 240px !important;
+
+      .ant-timeline-item-content h2 {
+        font-size: 2rem !important;
+        line-height: 2.5rem !important;
+        transform: translateY(-20%) !important;
+      }
+
+      .summer-timeline {
+        .ant-timeline-item-content h2 {
+          transform: translate(100%, -20%) !important;
+        }
+      }
+
+      .fall-spring-timeline {
+        .ant-timeline-item-tail {
+          height: 55px !important;
         }
       }
     }

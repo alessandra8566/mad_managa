@@ -15,11 +15,11 @@
                 <!-- <router-link to="/">HOME</router-link> -->
               </li>
               <li>
-                <a @click="scrollTo('Story')">STORY</a>
+                <a @click="scrollTo('Madmanga')">STORY</a>
                 <!-- <router-link to="/">STORY</router-link> -->
               </li>
               <li>
-                <a @click="scrollTo('Thunder')">FOMO STONE</a>
+                <a @click="scrollTo('Evolution')">FOMO STONE</a>
                 <!-- <router-link to="/">FOMO STONE</router-link> -->
               </li>
               <li>
@@ -124,8 +124,18 @@
 
       scrollTo(id) {
         this.$store.dispatch('home/updateOffsetTops', this.getTop())
+        // const parallaxPosition = (id == 'Home' && 0) ||
+        //   ((id == 'Madmanga' && this.offsetTops.Home == this.offsetTops.Madmanga) && (this.offsetTops[id] / 2)) ||
+        //   this.offsetTops[id]
+        var parallaxPosition = 0;
+        if (id == 'Home') parallaxPosition = 0
+        else if (id == 'Madmanga' && (this.currentScrollTop > (this.offsetTops.Story / 2))) parallaxPosition = this
+          .offsetTops.Story / 2;
+        else parallaxPosition = this.offsetTops[id]
+        console.log(id, parallaxPosition)
+
         window.scrollTo({
-          top: id == 'Home' ? 0 : this.offsetTops[id],
+          top: parallaxPosition,
           behavior: 'smooth'
         })
       },
@@ -178,6 +188,13 @@
   }
 
   .header--fixed {
+    .header-wrapper {
+      .header_logo {
+        max-width: 40px;
+        transform: scale(1)
+      }
+    }
+
     &.sticky {
       @media #{$md-layout} {
         .header-wrapper {

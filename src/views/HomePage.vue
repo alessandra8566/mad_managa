@@ -3,9 +3,10 @@
     <!-- <full-page :options="fullpageOption" id="fullpage" ref="fullpage"> -->
     <div class="por">
       <Home id="Home" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
-      <Madmanga id="Madmanga" class="parallax-sticky-start" :start="videostatus" :style="`--sticky-height: 100vh`" />
-      <Story id="Story" class="" />
+      <Counter id="Counter" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
+      <Madmanga id="Madmanga" :start="videostatus" />
     </div>
+    <Story id="Story" class="" />
     <!-- </full-page> -->
     <Evolution id="Evolution" />
     <Thunder id="Thunder" />
@@ -18,6 +19,7 @@
 
 <script>
   import Home from '@/components/Home/Home';
+  import Counter from '@/components/Home/Counter'
   import Story from "@/components/Home/Story"
   import Evolution from "@/components/Home/Evolution"
   import About from "@/components/Home/About";
@@ -49,7 +51,8 @@
       Box,
       Madmanga,
       RoadMap,
-      WhoWeAre
+      WhoWeAre,
+      Counter
     },
     data() {
       return {
@@ -74,15 +77,22 @@
         window.onscroll = () => {
           const offsetTop = document.documentElement.scrollTop
           _this.$store.dispatch('home/updateCurrentScrollTop', offsetTop)
-          if (!_this.videostatus) _this.videostatus = offsetTop > _this.offsetTops.Madmanga ? true : false
+          if (!_this.videostatus) _this.videostatus = offsetTop >= _this.offsetTops.Madmanga ? true : false
         };
       },
+      resize() {
+        const _this = this
+        window.onresize = () => {
+          _this.$store.dispatch('home/updateCurrentWidth', window.innerWidth)
+        }
+      }
     },
     computed: {
       ...mapState('home', ['currentScrollTop', 'offsetTops', 'fullpageElement'])
     },
     mounted() {
       this.scroll()
+      this.resize()
       this.$store.dispatch('home/updateOffsetTops', this.getTop())
     }
   }

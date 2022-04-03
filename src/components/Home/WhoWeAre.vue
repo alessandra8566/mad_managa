@@ -54,123 +54,123 @@
         eggList: [{
           title: "DAVID",
           content: "Story",
-          img: '/images/mad_mange/eggs/david.png'
+          img: '/images/mad_mange/eggs/team/t-01.png'
         }, {
           title: "JEREMY",
           content: "Execution",
-          img: '/images/mad_mange/eggs/jeremy.png'
+          img: '/images/mad_mange/eggs/team/t-02.png'
         }, {
           title: "METASTOKE",
           content: "Strategy",
-          img: '/images/mad_mange/eggs/metastoke.png'
+          img: '/images/mad_mange/eggs/team/t-03.png'
         }, {
           title: "OCEAN",
           content: "Grand Scheme",
-          img: '/images/mad_mange/eggs/Blackbeard.png'
+          img: '/images/mad_mange/eggs/team/t-04.png'
         }, {
           title: "SING",
           content: "Scripting",
-          img: '/images/mad_mange/eggs/sing.png'
+          img: '/images/mad_mange/eggs/team/t-05.png'
         }, {
           title: "JC",
           content: "Marketing PR",
-          img: '/images/mad_mange/eggs/jc.png'
+          img: '/images/mad_mange/eggs/team/t-06.png'
         }, {
           title: "ゴハン",
           content: "Animation",
-          img: '/images/mad_mange/eggs/animation.png'
+          img: '/images/mad_mange/eggs/team/t-07.png'
         }, {
           title: "MOLY",
           content: "Development",
-          img: '/images/mad_mange/eggs/Luffy_Chopper.png'
+          img: '/images/mad_mange/eggs/team/t-08.png'
         }, {
           title: "ANDREA",
           content: "Social Media",
-          img: '/images/mad_mange/eggs/Andrea.png'
+          img: '/images/mad_mange/eggs/team/t-09.png'
         }, {
           title: "UNEE",
           content: "Artist",
-          img: '/images/mad_mange/eggs/unee.png'
+          img: '/images/mad_mange/eggs/team/t-10.png'
         }, {
           title: "DAVID",
           content: "Story",
-          img: '/images/mad_mange/eggs/david.png'
+          img: '/images/mad_mange/eggs/team/t-01.png'
         }, {
           title: "JEREMY",
           content: "Execution",
-          img: '/images/mad_mange/eggs/jeremy.png'
+          img: '/images/mad_mange/eggs/team/t-02.png'
         }, {
           title: "METASTOKE",
           content: "Strategy",
-          img: '/images/mad_mange/eggs/metastoke.png'
+          img: '/images/mad_mange/eggs/team/t-03.png'
         }, {
           title: "OCEAN",
           content: "Grand Scheme",
-          img: '/images/mad_mange/eggs/Blackbeard.png'
+          img: '/images/mad_mange/eggs/team/t-04.png'
         }, {
           title: "SING",
           content: "Scripting",
-          img: '/images/mad_mange/eggs/sing.png'
+          img: '/images/mad_mange/eggs/team/t-05.png'
         }, {
           title: "JC",
           content: "Marketing PR",
-          img: '/images/mad_mange/eggs/jc.png'
+          img: '/images/mad_mange/eggs/team/t-06.png'
         }, {
           title: "ゴハン",
           content: "Animation",
-          img: '/images/mad_mange/eggs/animation.png'
+          img: '/images/mad_mange/eggs/team/t-07.png'
         }, {
           title: "MOLY",
           content: "Development",
-          img: '/images/mad_mange/eggs/Luffy_Chopper.png'
+          img: '/images/mad_mange/eggs/team/t-08.png'
         }, {
           title: "ANDREA",
           content: "Social Media",
-          img: '/images/mad_mange/eggs/Andrea.png'
+          img: '/images/mad_mange/eggs/team/t-09.png'
         }, {
           title: "UNEE",
           content: "Artist",
-          img: '/images/mad_mange/eggs/unee.png'
+          img: '/images/mad_mange/eggs/team/t-10.png'
         }, {
           title: "DAVID",
           content: "Story",
-          img: '/images/mad_mange/eggs/david.png'
+          img: '/images/mad_mange/eggs/team/t-01.png'
         }, {
           title: "JEREMY",
           content: "Execution",
-          img: '/images/mad_mange/eggs/jeremy.png'
+          img: '/images/mad_mange/eggs/team/t-02.png'
         }, {
           title: "METASTOKE",
           content: "Strategy",
-          img: '/images/mad_mange/eggs/metastoke.png'
+          img: '/images/mad_mange/eggs/team/t-03.png'
         }, {
           title: "OCEAN",
           content: "Grand Scheme",
-          img: '/images/mad_mange/eggs/Blackbeard.png'
+          img: '/images/mad_mange/eggs/team/t-04.png'
         }, {
           title: "SING",
           content: "Scripting",
-          img: '/images/mad_mange/eggs/sing.png'
+          img: '/images/mad_mange/eggs/team/t-05.png'
         }, {
           title: "JC",
           content: "Marketing PR",
-          img: '/images/mad_mange/eggs/jc.png'
+          img: '/images/mad_mange/eggs/team/t-06.png'
         }, {
           title: "ゴハン",
           content: "Animation",
-          img: '/images/mad_mange/eggs/animation.png'
+          img: '/images/mad_mange/eggs/team/t-07.png'
         }, {
           title: "MOLY",
           content: "Development",
-          img: '/images/mad_mange/eggs/Luffy_Chopper.png'
+          img: '/images/mad_mange/eggs/team/t-08.png'
         }, {
           title: "ANDREA",
           content: "Social Media",
-          img: '/images/mad_mange/eggs/Andrea.png'
+          img: '/images/mad_mange/eggs/team/t-09.png'
         }, {
           title: "UNEE",
           content: "Artist",
-          img: '/images/mad_mange/eggs/unee.png'
+          img: '/images/mad_mange/eggs/team/t-10.png'
         }]
       }
     }
