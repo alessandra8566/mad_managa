@@ -10,7 +10,7 @@ export default {
     getTop() {
       const offsetTops = {
         Home: $('#Home').offset().top,
-        // Counter: $('#Counter').offset().top,
+        Counter: $('#Counter').offset().top,
         Madmanga: $('#Madmanga').offset().top,
         Story: $('#Story').offset().top,
         Parallax: $('#Parallax').offset().top,

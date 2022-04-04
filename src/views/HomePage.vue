@@ -3,7 +3,7 @@
     <!-- <full-page :options="fullpageOption" id="fullpage" ref="fullpage"> -->
     <div class="por">
       <Home id="Home" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
-      <!-- <Counter id="Counter" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" /> -->
+      <Counter id="Counter" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
       <Madmanga id="Madmanga" :start="videostatus" />
     </div>
     <Story id="Story" class="" />
