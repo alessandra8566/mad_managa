@@ -76,7 +76,7 @@
           top: false,
           bottom: true,
           color: 'blue', // purple | blue | white
-          fill: true
+          fill: false
         },
         random: 0
       }

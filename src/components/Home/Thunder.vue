@@ -56,21 +56,22 @@
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/88939/drop.png" class="bubble b8" />
           </div>
         </div>
-        <div class="thunder_container zid_5" style="">
+        <div class="thunder_container zid_5 por" style="">
           <div class="container">
             <div class="fomo_hiro_img_container por width100 flex jcc aic">
               <img src="/images/mad_mange/fomo-hiro-cut.png" class="zid_2 por fomo_hiro_img" alt="">
-              <div class="fomo_hiro_marquee" style="width: 200%;">
-                <Marquee move-to="left" class="zid_1">
-                  <h1 class="white font-regular marquee_font">FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
-                    HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
-                    HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
-                    HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
-                    HERO </h1>
-                </Marquee>
-              </div>
+
               <div class="circle"></div>
             </div>
+          </div>
+          <div class="fomo_hiro_marquee" style="width: 200%;">
+            <Marquee move-to="left" class="zid_1">
+              <h1 class="white font-regular marquee_font">FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
+                HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
+                HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
+                HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO HERO FOMO
+                HERO </h1>
+            </Marquee>
           </div>
         </div>
       </thunder-bg>

@@ -1,22 +1,25 @@
 <template>
   <grid3d :options="gridOption" class="por">
-    <div class="container pt--120 zid_6">
-      <sub-title title="WHO WE ARE" class="" />
-      <a-row type="flex" class="who_we_are_text_container ais pt--40 pb--60">
-        <a-col :md="24" :lg="16" class="pad_6 who_we_are_content">
-          <p class="white">MadManga is an international team, with Silicon Valley venture capitalists as consultants and
-            team members
-            from copyrights, exhibition curation, e-sports, and tech backgrounds. The members have respectively worked
-            closely with Disney, Warner Bros. Studio, Barbie, ONE PIECE, and NARUTO. In addition, tens of contemporary
-            artists will join hands to work on this project.</p>
-        </a-col>
-        <a-col :md="24" :lg="8" class="pad_6 flex jcsa fdc who_we_are_logo">
-          <h3 class="white marb_4">PARTNER</h3>
-          <img src="/images/mad_mange/caller.png" style="max-width: 280px" class="" alt="">
-        </a-col>
-      </a-row>
+    <div class="por width100">
+      <div class="container pt--120 zid_6">
+        <sub-title title="WHO WE ARE" class="" />
+        <a-row type="flex" class="who_we_are_text_container ais pt--40 pb--60">
+          <a-col :md="24" :lg="16" class="pad_6 who_we_are_content">
+            <p class="white">MadManga is an international team, with Silicon Valley venture capitalists as consultants
+              and
+              team members
+              from copyrights, exhibition curation, e-sports, and tech backgrounds. The members have respectively worked
+              closely with Disney, Warner Bros. Studio, Barbie, ONE PIECE, and NARUTO. In addition, tens of contemporary
+              artists will join hands to work on this project.</p>
+          </a-col>
+          <a-col :md="24" :lg="8" class="pad_6 flex jcsa fdc who_we_are_logo">
+            <h3 class="white marb_4">PARTNER</h3>
+            <img src="/images/mad_mange/caller.png" style="max-width: 280px" class="" alt="">
+          </a-col>
+        </a-row>
+      </div>
       <Marquee moveTo="left" class="poa egglist_marquee">
-        <div class="flex jcc aic nowrap">
+        <div class="flex jcfs aic nowrap">
           <div v-for="(item, ind) in eggList" :key="ind" class="flex jcc aic fdc text-center flex1">
             <h3 class="white mar_0 font-regular">{{ item.title }}</h3>
             <p class="white"> {{ item.content }}</p>
@@ -41,6 +44,7 @@
     },
     data() {
       return {
+        // marquee_width: document.getElementsByClassName('egglist_marquee')[0].offsetWidth,
         gridOption: {
           top: false,
           bottom: true,
@@ -52,126 +56,128 @@
           stars: false
         },
         eggList: [{
-          title: "DAVID",
-          content: "Story",
-          img: '/images/mad_mange/eggs/team/t-01.png'
-        }, {
-          title: "JEREMY",
-          content: "Execution",
-          img: '/images/mad_mange/eggs/team/t-02.png'
-        }, {
-          title: "METASTOKE",
-          content: "Strategy",
-          img: '/images/mad_mange/eggs/team/t-03.png'
-        }, {
-          title: "OCEAN",
-          content: "Grand Scheme",
-          img: '/images/mad_mange/eggs/team/t-04.png'
-        }, {
-          title: "SING",
-          content: "Scripting",
-          img: '/images/mad_mange/eggs/team/t-05.png'
-        }, {
-          title: "JC",
-          content: "Marketing PR",
-          img: '/images/mad_mange/eggs/team/t-06.png'
-        }, {
-          title: "ゴハン",
-          content: "Animation",
-          img: '/images/mad_mange/eggs/team/t-07.png'
-        }, {
-          title: "MOLY",
-          content: "Development",
-          img: '/images/mad_mange/eggs/team/t-08.png'
-        }, {
-          title: "ANDREA",
-          content: "Social Media",
-          img: '/images/mad_mange/eggs/team/t-09.png'
-        }, {
-          title: "UNEE",
-          content: "Artist",
-          img: '/images/mad_mange/eggs/team/t-10.png'
-        }, {
-          title: "DAVID",
-          content: "Story",
-          img: '/images/mad_mange/eggs/team/t-01.png'
-        }, {
-          title: "JEREMY",
-          content: "Execution",
-          img: '/images/mad_mange/eggs/team/t-02.png'
-        }, {
-          title: "METASTOKE",
-          content: "Strategy",
-          img: '/images/mad_mange/eggs/team/t-03.png'
-        }, {
-          title: "OCEAN",
-          content: "Grand Scheme",
-          img: '/images/mad_mange/eggs/team/t-04.png'
-        }, {
-          title: "SING",
-          content: "Scripting",
-          img: '/images/mad_mange/eggs/team/t-05.png'
-        }, {
-          title: "JC",
-          content: "Marketing PR",
-          img: '/images/mad_mange/eggs/team/t-06.png'
-        }, {
-          title: "ゴハン",
-          content: "Animation",
-          img: '/images/mad_mange/eggs/team/t-07.png'
-        }, {
-          title: "MOLY",
-          content: "Development",
-          img: '/images/mad_mange/eggs/team/t-08.png'
-        }, {
-          title: "ANDREA",
-          content: "Social Media",
-          img: '/images/mad_mange/eggs/team/t-09.png'
-        }, {
-          title: "UNEE",
-          content: "Artist",
-          img: '/images/mad_mange/eggs/team/t-10.png'
-        }, {
-          title: "DAVID",
-          content: "Story",
-          img: '/images/mad_mange/eggs/team/t-01.png'
-        }, {
-          title: "JEREMY",
-          content: "Execution",
-          img: '/images/mad_mange/eggs/team/t-02.png'
-        }, {
-          title: "METASTOKE",
-          content: "Strategy",
-          img: '/images/mad_mange/eggs/team/t-03.png'
-        }, {
-          title: "OCEAN",
-          content: "Grand Scheme",
-          img: '/images/mad_mange/eggs/team/t-04.png'
-        }, {
-          title: "SING",
-          content: "Scripting",
-          img: '/images/mad_mange/eggs/team/t-05.png'
-        }, {
-          title: "JC",
-          content: "Marketing PR",
-          img: '/images/mad_mange/eggs/team/t-06.png'
-        }, {
-          title: "ゴハン",
-          content: "Animation",
-          img: '/images/mad_mange/eggs/team/t-07.png'
-        }, {
-          title: "MOLY",
-          content: "Development",
-          img: '/images/mad_mange/eggs/team/t-08.png'
-        }, {
-          title: "ANDREA",
-          content: "Social Media",
-          img: '/images/mad_mange/eggs/team/t-09.png'
-        }, {
-          title: "UNEE",
-          content: "Artist",
-          img: '/images/mad_mange/eggs/team/t-10.png'
-        }]
+            title: "DAVID",
+            content: "Story",
+            img: '/images/mad_mange/eggs/team/t-01.png'
+          }, {
+            title: "JEREMY",
+            content: "Execution",
+            img: '/images/mad_mange/eggs/team/t-02.png'
+          }, {
+            title: "METASTOKE",
+            content: "Strategy",
+            img: '/images/mad_mange/eggs/team/t-03.png'
+          }, {
+            title: "OCEAN",
+            content: "Grand Scheme",
+            img: '/images/mad_mange/eggs/team/t-04.png'
+          }, {
+            title: "SING",
+            content: "Scripting",
+            img: '/images/mad_mange/eggs/team/t-05.png'
+          }, {
+            title: "JC",
+            content: "Marketing PR",
+            img: '/images/mad_mange/eggs/team/t-06.png'
+          }, {
+            title: "ゴハン",
+            content: "Animation",
+            img: '/images/mad_mange/eggs/team/t-07.png'
+          }, {
+            title: "MOLY",
+            content: "Development",
+            img: '/images/mad_mange/eggs/team/t-08.png'
+          }, {
+            title: "ANDREA",
+            content: "Social Media",
+            img: '/images/mad_mange/eggs/team/t-09.png'
+          }, {
+            title: "UNEE",
+            content: "Artist",
+            img: '/images/mad_mange/eggs/team/t-10.png'
+          }, {
+            title: "DAVID",
+            content: "Story",
+            img: '/images/mad_mange/eggs/team/t-01.png'
+          }, {
+            title: "JEREMY",
+            content: "Execution",
+            img: '/images/mad_mange/eggs/team/t-02.png'
+          }, {
+            title: "METASTOKE",
+            content: "Strategy",
+            img: '/images/mad_mange/eggs/team/t-03.png'
+          }, {
+            title: "OCEAN",
+            content: "Grand Scheme",
+            img: '/images/mad_mange/eggs/team/t-04.png'
+          }, {
+            title: "SING",
+            content: "Scripting",
+            img: '/images/mad_mange/eggs/team/t-05.png'
+          }, {
+            title: "JC",
+            content: "Marketing PR",
+            img: '/images/mad_mange/eggs/team/t-06.png'
+          }, {
+            title: "ゴハン",
+            content: "Animation",
+            img: '/images/mad_mange/eggs/team/t-07.png'
+          }, {
+            title: "MOLY",
+            content: "Development",
+            img: '/images/mad_mange/eggs/team/t-08.png'
+          }, {
+            title: "ANDREA",
+            content: "Social Media",
+            img: '/images/mad_mange/eggs/team/t-09.png'
+          }, {
+            title: "UNEE",
+            content: "Artist",
+            img: '/images/mad_mange/eggs/team/t-10.png'
+          },
+          // {
+          //   title: "DAVID",
+          //   content: "Story",
+          //   img: '/images/mad_mange/eggs/team/t-01.png'
+          // }, {
+          //   title: "JEREMY",
+          //   content: "Execution",
+          //   img: '/images/mad_mange/eggs/team/t-02.png'
+          // }, {
+          //   title: "METASTOKE",
+          //   content: "Strategy",
+          //   img: '/images/mad_mange/eggs/team/t-03.png'
+          // }, {
+          //   title: "OCEAN",
+          //   content: "Grand Scheme",
+          //   img: '/images/mad_mange/eggs/team/t-04.png'
+          // }, {
+          //   title: "SING",
+          //   content: "Scripting",
+          //   img: '/images/mad_mange/eggs/team/t-05.png'
+          // }, {
+          //   title: "JC",
+          //   content: "Marketing PR",
+          //   img: '/images/mad_mange/eggs/team/t-06.png'
+          // }, {
+          //   title: "ゴハン",
+          //   content: "Animation",
+          //   img: '/images/mad_mange/eggs/team/t-07.png'
+          // }, {
+          //   title: "MOLY",
+          //   content: "Development",
+          //   img: '/images/mad_mange/eggs/team/t-08.png'
+          // }, {
+          //   title: "ANDREA",
+          //   content: "Social Media",
+          //   img: '/images/mad_mange/eggs/team/t-09.png'
+          // }, {
+          //   title: "UNEE",
+          //   content: "Artist",
+          //   img: '/images/mad_mange/eggs/team/t-10.png'
+          // }
+        ]
       }
     }
   }
