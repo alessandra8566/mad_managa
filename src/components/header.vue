@@ -188,11 +188,9 @@
   }
 
   .header--fixed {
-    .header-wrapper {
-      .header_logo {
-        max-width: 40px;
-        transform: scale(1)
-      }
+    .header_logo {
+      max-width: 60px;
+      transform: scale(1.2)
     }
 
     &.sticky {
@@ -210,10 +208,17 @@
     }
   }
 
-  .header_logo {
-    max-width: 60px;
-    transform: scale(1.2)
+  @media #{$md-layout} {
+    .header--fixed {
+      .header_logo {
+        max-width: 40px;
+        transform: scale(1)
+      }
+    }
   }
+
+
+
 
   .header-wrapper .mainmenunav ul.mainmenu>li a {
     position: relative;

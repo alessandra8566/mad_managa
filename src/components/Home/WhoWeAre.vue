@@ -58,7 +58,7 @@
         eggList: [{
             title: "DAVID",
             content: "Story",
-            img: '/images/mad_mange/eggs/team/t-01.png'
+            img: '/images/mad_mange/eggs/team/t-10.png'
           }, {
             title: "JEREMY",
             content: "Execution",
@@ -94,11 +94,11 @@
           }, {
             title: "UNEE",
             content: "Artist",
-            img: '/images/mad_mange/eggs/team/t-10.png'
+            img: '/images/mad_mange/eggs/team/t-01.png'
           }, {
             title: "DAVID",
             content: "Story",
-            img: '/images/mad_mange/eggs/team/t-01.png'
+            img: '/images/mad_mange/eggs/team/t-10.png'
           }, {
             title: "JEREMY",
             content: "Execution",
@@ -134,7 +134,7 @@
           }, {
             title: "UNEE",
             content: "Artist",
-            img: '/images/mad_mange/eggs/team/t-10.png'
+            img: '/images/mad_mange/eggs/team/t-01.png'
           },
           // {
           //   title: "DAVID",

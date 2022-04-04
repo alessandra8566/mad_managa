@@ -33,14 +33,14 @@
     &.right {
       // margin-right: -100%;
       transform: translate(-100%);
-      animation: myMove-right 50s linear infinite;
+      animation: myMove-right 120s linear infinite;
 
     }
 
     &.left {
       // margin-left: -100%;
       transform: translate(0%);
-      animation: myMove-left 50s linear infinite;
+      animation: myMove-left 120s linear infinite;
     }
   }
 

@@ -2,8 +2,8 @@
   <div class="video_container flex jcc hidden por">
     <!-- <video-bg :sources="['/video/madmanga.mp4']" :muted="false" /> -->
     <div class="height100 por">
-      <video ref="videoPlayer" class="video-js vjs-default-skin po_center" x5-video-player-fullscreen="true"
-        x5-playsinline playsinline webkit-playsinline></video>
+      <video ref="videoPlayer" autoplay muted loop preload class="video-js vjs-default-skin po_center"
+        x5-video-player-fullscreen="true" x5-playsinline playsinline webkit-playsinline></video>
     </div>
     <div class="fullscreen-btn flex jcfn aic width100 cp" @click="fullscreen()">
       <h3 class="font-regular white mar_0" style="font-size: 24px">Watch The Full Video</h3>
@@ -13,14 +13,11 @@
 </template>
 
 <script>
-  import VideoBg from 'vue-videobg'
   import videojs from 'video.js'
 
   export default {
     name: "videoPlayer",
-    components: {
-      VideoBg
-    },
+    components: {},
     props: {
       start: false
     },
@@ -34,6 +31,7 @@
       this.player = videojs(this.$refs.videoPlayer, {
         preload: "auto",
         autoplay: this.ismobile ? true : false,
+        // autoplay: true,
         // techOrder: ['flash'],
         controls: false,
         muted: true,
@@ -44,6 +42,7 @@
           src: '/video/madmanga.mp4'
         }]
       })
+      // this.ismobile && document.getElementsByClassName('vjs-big-play-button')[0].click()
       console.log(this.player)
     },
     methods: {

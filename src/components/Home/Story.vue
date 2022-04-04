@@ -52,7 +52,6 @@
 
 <script>
   import videojs from 'video.js'
-  import VideoBg from 'vue-videobg'
   import SubTitle from '../common/subtitle.vue'
   import {
     mapState
@@ -61,7 +60,6 @@
     name: "videoPlayer",
     components: {
       SubTitle,
-      VideoBg
     },
     data() {
       return {

@@ -8,8 +8,6 @@ import store from './store'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import '@/assets/scss/index.scss';
 
-import 'fullpage.js/vendors/scrolloverflow';
-import VueFullpage from 'vue-fullpage.js'
 import animated from 'animate.css' 
 
 import DefaultLayout from './layout/DefaultLayout'
@@ -26,7 +24,6 @@ import "aos/dist/aos.css";
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(Antd)
-Vue.use(VueFullpage)
 Vue.use(animated)
 Vue.config.productionTip = false
 Vue.use(AOS);

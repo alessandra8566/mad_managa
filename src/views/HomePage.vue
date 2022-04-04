@@ -1,13 +1,11 @@
 <template>
   <div>
-    <!-- <full-page :options="fullpageOption" id="fullpage" ref="fullpage"> -->
     <div class="por">
       <Home id="Home" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
       <Counter id="Counter" class="parallax-sticky-start" :style="`--sticky-height: 100vh`" />
       <Madmanga id="Madmanga" :start="videostatus" />
     </div>
     <Story id="Story" class="" />
-    <!-- </full-page> -->
     <Evolution id="Evolution" />
     <Thunder id="Thunder" />
     <!-- <Box /> -->
@@ -57,18 +55,6 @@
     data() {
       return {
         videostatus: false,
-        fullpageOption: {
-          licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
-          autoScrolling: true,
-          fitToSection: false,
-          css3: true,
-          scrollBar: true,
-          afterLoad: (oldVal, newVal) => {
-            const _this = this;
-            _this.videostatus = newVal.index == 1 ? true : false
-            if (newVal.index == 2) this.fullpageElement.api.setAutoScrolling(false)
-          }
-        },
       }
     },
     methods: {
