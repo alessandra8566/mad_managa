@@ -51,7 +51,7 @@
           <div class="social-share-inner">
             <ul class="social-share social-style--2 color-black d-flex justify-content-start liststyle">
               <li class="flex jcc aic marl_2 marr_2">
-                <a>
+                <a href="https://discord.com/invite/madmanga">
                   <svg id="圖層_1" style="width: 90%" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 18.59 14.13">
                     <path class="cls-1"
@@ -62,7 +62,7 @@
                 </a>
               </li>
               <li class="flex jcc aic marl_2 marr_2">
-                <a>
+                <a href="https://www.instagram.com/madmanga2022/">
                   <svg id="圖層_1" style="width: 80%" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 17.28 17.26">
                     <path class="cls-1"
@@ -78,7 +78,7 @@
                 </a>
               </li>
               <li class="flex jcc aic marl_2 marr_2">
-                <a>
+                <a href="https://mobile.twitter.com/madmanga2022">
                   <svg id="圖層_1" style="width: 90%" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16.82 13.77">
                     <path class="cls-1"

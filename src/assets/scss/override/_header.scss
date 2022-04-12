@@ -61,7 +61,7 @@
     &.onTop {
       .login-circle {
         width: 5.5rem;
-        height: 7rem;
+        height: 8.5rem;
       }      
     }
     .login-circle {
@@ -135,8 +135,27 @@
     .header-right {
       margin-right: 0rem !important;
     }
+
+    .menutrigger {
+      font-size: 0;
+      i {
+        font-size: 28px;
+      }
+    }
+
+    
+    // .social-share-inner {
+    //   display: none;
+    // }
+  }
+  @media #{$sm-layout} {
     .social-share-inner {
-      display: none;
+      ul {
+        li {
+          margin-left: 8px !important;
+          margin-right: 8px !important;
+        }
+      }
     }
   }
 }
